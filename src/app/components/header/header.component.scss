@@ -1,0 +1,43 @@
+@import '../../../variables.scss';
+
+.app-header {
+  color: $white;
+  background-color: $black;
+  padding: 15px;
+
+  .app-heading {
+  }
+
+  .navbar {
+    padding-right: 0px;
+
+    ul > li {
+      padding: 0px 15px;
+      margin: 0px 10px;
+    }
+
+    ul > li:last-child{
+      padding: 0px 15px 0px 15px;
+      margin: 0px 0px 0px 10px;
+    }
+
+    .nav-link {
+      color: white;
+      cursor: pointer;
+      font-weight: normal;
+    }
+
+    .nav-link-active-li {
+      background-color: white;
+      border-radius: 20px;
+      transition: 0.5s;
+
+      .nav-link-active {
+        font-weight: bold;
+        color: black;
+      }
+    }
+
+  }
+
+}
