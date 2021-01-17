@@ -1,1 +1,36 @@
-<p>portfolio-project works!</p>
+<section>
+  <div class="flex text-center flex-justify-content-space-around flex-wrap">
+    <div *ngFor="let job of experience"
+      class="forecast-weather-column pad-10-all">
+      <mat-card style="display: flex;" class="flex flex-column flex-justify-content-space-around">
+        <div>
+          <mat-card-title class="text-left">
+            {{job.companyName}}
+          </mat-card-title>
+        </div>
+        <div>
+          <mat-card-subtitle class="text-left">
+            {{job.position}}
+          </mat-card-subtitle>
+        </div>
+
+        <div>
+
+        <mat-card-content class="text-left">
+          {{job.description}}
+        </mat-card-content>
+        </div>
+
+        <div>
+          <mat-card-action class="text-center">
+            <button mat-raised-button color="primary">
+              Responsibility
+            </button>
+          </mat-card-action>
+        </div>
+
+      </mat-card>
+    </div>
+  </div>
+
+</section>

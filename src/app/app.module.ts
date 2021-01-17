@@ -58,6 +58,6 @@ import { ContactMeComponent } from './components/contact-me/contact-me.component
   ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }

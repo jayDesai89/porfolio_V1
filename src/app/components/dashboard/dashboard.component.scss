@@ -1,5 +1,33 @@
 @import '../../../variables.scss';
 
 .app-dashboard {
-  border: 1px solid blue;
+  // border: 1px solid blue;
+
+  .experience {
+    padding: 2%;
+    // background: transparent linear-gradient(135deg, #1DBDEE 0%, #1B89DA 68%, #195DC9 100%) 0% 0% no-repeat padding-box;
+    border: 1px solid #FFFFFF;
+    //opacity: 0.42
+  }
+
+  .banner-text-div {
+    p,div {
+      display: inline-block;
+      font-size: 3em;
+      color: black;
+    }
+  }
+
+  .banner-image {
+    height: 100%;
+    width: 100%;
+  }
+
+  @media (min-width:1025px) {
+    .banner-text {
+      font-size: 1em;
+    }
+  }
+
+
 }
