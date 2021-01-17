@@ -1,27 +1,37 @@
-<section class="experience-project-section">
-
+<section class="learning-project-section">
   <div class="flex text-center flex-justify-content-space-around flex-wrap">
-    <div *ngFor="let job of experience"
+    <div *ngFor="let project of learningExp"
       class="forecast-weather-column pad-10-all">
       <mat-card style="display: flex;" class="flex flex-column flex-justify-content-space-around">
         <div>
           <mat-card-title class="text-left txtSize20">
-            {{job.companyName}}
+            {{project.projectName}}
           </mat-card-title>
+        </div>
+        <div>
           <mat-card-subtitle class="text-left txtSize18">
-            {{job.position}}
+            {{project.techStack}}
           </mat-card-subtitle>
         </div>
+
         <div>
+
         <mat-card-content class="text-left txtSize16">
-          {{job.description}}
+          {{project.description}}
         </mat-card-content>
         </div>
+
         <div>
           <mat-card-action class="text-center">
-            <button mat-raised-button color="primary">
-              Project detail
-            </button>
+            <div class="flex flex-row flex-wrap flex-justify-content-space-around">
+              <button mat-raised-button color="primary">
+                Code
+              </button>
+              <button mat-raised-button color="primary">
+                Demo
+              </button>
+            </div>
+
           </mat-card-action>
         </div>
 
@@ -30,7 +40,3 @@
   </div>
 
 </section>
-<!-- 
-<section>
-  <app-learning-project></app-learning-project>
-</section> -->

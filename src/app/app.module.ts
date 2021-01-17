@@ -28,6 +28,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
+import { LearningProjectComponent } from './components/learning-project/learning-project.component';
 
 
 
@@ -37,7 +38,8 @@ import { ContactMeComponent } from './components/contact-me/contact-me.component
     DashboardComponent,
     HeaderComponent,
     PortfolioProjectComponent,
-    ContactMeComponent
+    ContactMeComponent,
+    LearningProjectComponent
   ],
   imports: [
     BrowserModule,

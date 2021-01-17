@@ -59,6 +59,7 @@ mat-sidenav-container {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: black;
 }
 
 .view-container {
@@ -81,6 +82,9 @@ mat-sidenav-container {
 }
 .txtSize20{
   font-size: 20px;
+}
+.txtSize18{
+  font-size: 18px;
 }
 .txtSize16{
   font-size: 16px;
