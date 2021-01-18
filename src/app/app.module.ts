@@ -11,7 +11,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
 // Components
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HeaderComponent } from './components/header/header.component';
-import { PortfolioProjectComponent } from './components/portfolio-project/portfolio-project.component';
+import { DialogOverviewExampleDialog, PortfolioProjectComponent } from './components/portfolio-project/portfolio-project.component';
 import { AppComponent } from './app.component';
 
 // Pipes
@@ -27,8 +27,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import {MatDialogModule} from '@angular/material/dialog';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
 import { LearningProjectComponent } from './components/learning-project/learning-project.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -39,7 +41,9 @@ import { LearningProjectComponent } from './components/learning-project/learning
     HeaderComponent,
     PortfolioProjectComponent,
     ContactMeComponent,
-    LearningProjectComponent
+    LearningProjectComponent,
+    DialogOverviewExampleDialog,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -56,10 +60,12 @@ import { LearningProjectComponent } from './components/learning-project/learning
     MatButtonToggleModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  entryComponents: [DialogOverviewExampleDialog]
 })
 export class AppModule { }

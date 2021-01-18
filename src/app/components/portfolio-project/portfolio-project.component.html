@@ -1,7 +1,7 @@
 <section class="experience-project-section">
 
   <div class="flex text-center flex-justify-content-space-around flex-wrap">
-    <div *ngFor="let job of experience"
+    <div *ngFor="let job of experience;let i = index"
       class="forecast-weather-column pad-10-all">
       <mat-card style="display: flex;" class="flex flex-column flex-justify-content-space-around">
         <div>
@@ -19,7 +19,7 @@
         </div>
         <div>
           <mat-card-action class="text-center">
-            <button mat-raised-button color="primary">
+            <button mat-raised-button color="primary" (click)="openDialog(job)">
               Project detail
             </button>
           </mat-card-action>
@@ -30,7 +30,7 @@
   </div>
 
 </section>
-<!-- 
+<!--
 <section>
   <app-learning-project></app-learning-project>
 </section> -->

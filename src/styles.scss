@@ -365,3 +365,14 @@ flex-no-wrap {
   font-style: normal;
 }
 
+/* Dialog box style */
+.projectDetail-section .mat-dialog-container {
+  background-color:white;
+}
+
+
+.projectDetailBackdrop {
+  // filter: blur(20px);
+  // background-color: black;
+  // opacity: 0.7 !important;
+}

@@ -11,7 +11,7 @@ const routes: Routes = [
    * {path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule'},
    */
   {path: 'contactme', component: ContactMeComponent},
-  {path: 'portfolio', component: PortfolioProjectComponent},
+  {path: 'projects', component: PortfolioProjectComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: '**', redirectTo: 'dashboard'}
 ];
