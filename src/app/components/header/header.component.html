@@ -1,5 +1,7 @@
   <!-- Default web -->
- <section class="app-header row">
+ <header class="" [class.header_change]="header_variable">
+  <section class="app-header row">
+
    <div class="col-lg-6 col-md-6 col-sm-4">
      <div style="width: max-content;">
       <h1 class="app-heading" routerLink="/dashboard">
@@ -35,7 +37,9 @@
     </nav>
 
    </div>
- </section>
+
+</section>
+</header>
 
  <!-- If Mobile -->
  <section>
