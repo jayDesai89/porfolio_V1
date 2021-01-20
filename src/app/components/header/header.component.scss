@@ -1,19 +1,13 @@
 @import '../../../variables.scss';
+@import url("https://fonts.googleapis.com/css?family=Lato:300");
 
-
-.header_change {
-  position: sticky;
-  background-color: red;
-  width: 100%;
-  z-index: 10000;
-  top: 0;
-  left: 0;
-}
 
 .app-header {
   color: $white;
-  // background-color: $black;
-  padding: 1% 3%;
+  background-color: $black;
+  padding: 1% 15px;
+  transition: all 300ms ease-in;
+
 
   .app-heading {
     color: white;
@@ -40,12 +34,13 @@
       color: white;
       cursor: pointer;
       font-weight: normal;
+      transition: all 300ms ease-in;
     }
 
     .nav-link-active-li {
       background-color: white;
       border-radius: 20px;
-      transition: 0.5s;
+      transition: all 300ms ease-in;
 
       .nav-link-active {
         font-weight: bold;
@@ -55,6 +50,15 @@
 
   }
 
+}
+
+
+// On Page scroll apply below style
+.header_change {
+  .app-header {
+    padding: 0 2%;
+    transition: all 300ms ease-in;
+  }
 }
 
 

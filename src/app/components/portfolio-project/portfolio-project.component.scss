@@ -1,20 +1,29 @@
 .experience-project-section {
-  padding: 2%;
+  // padding: 2%;
 
   mat-card {
-    width: 400px;
+    flex: 1 0 300px;
+    max-width: 400px;
     height: 300px;
     background-color: white;
     color: black;
+    font-size: 1rem;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+      transform: translateY(-1rem);
+      box-shadow:  3px 5px 20px 1px lightcoral
+    }
+
+    &__title {
+      font-size: 1.7rem;
+      font-weight: 700px;
+    }
   }
 
-  .forecast-weather-column  {
-    width: max-content;
-    border-bottom: 1px solid white;
-  }
-
-}
-
-.modal-some {
-  background-color: green;
+  @media (max-width:641px)  {
+    .mat-card {
+      height: auto;
+    }
+  };
 }

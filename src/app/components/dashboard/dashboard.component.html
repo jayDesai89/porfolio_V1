@@ -1,4 +1,4 @@
-<article class="dashboard-section">
+<article class="container-fluid dashboard-section">
   <!-- Banner start -->
   <section class="banner-section">
     <div class="flex flex-row flex-justify-content-space-between banner-div">
@@ -25,9 +25,9 @@
   <!-- Banner end -->
 
   <!-- Experience start -->
-  <section class="mar-20-bottom">
+  <section class="" style="margin-bottom: 5%;">
 
-    <div class="row mar-15-bottom">
+    <div class="row mar-30-bottom">
       <div class="col-12" style="text-align: center;">
         <div>
           <p class="txtSize30" aria-label="Experience">
@@ -42,15 +42,15 @@
       </div>
     </div>
 
-  <app-portfolio-project></app-portfolio-project>
+  <app-portfolio-project *ngIf="show_project_comp"></app-portfolio-project>
 
   </section>
   <!-- Experience end -->
 
   <!-- Personal Projects -->
-  <section class="mar-20-bottom">
+  <section style="margin-bottom: 5%;">
 
-    <div class="row mar-15-bottom">
+    <div class="row mar-30-bottom">
       <div class="col-12" style="text-align: center;">
         <div>
           <p class="txtSize30" aria-label="Learning projects">
@@ -65,7 +65,7 @@
       </div>
     </div>
 
-    <app-learning-project></app-learning-project>
+    <app-learning-project *ngIf="show_learning_comp"></app-learning-project>
 
   </section>
   <!-- Personal Projects -->

@@ -1,11 +1,11 @@
-<section class="experience-project-section">
+<section class="container-fluid experience-project-section">
 
   <div class="flex text-center flex-justify-content-space-around flex-wrap">
     <div *ngFor="let job of experience;let i = index"
-      class="forecast-weather-column pad-10-all animate__animated animate__zoomIn">
-      <mat-card style="display: flex;" class="flex flex-column flex-justify-content-space-around">
+      class="pad-10-all animate__animated animate__zoomIn">
+      <mat-card style="display: flex;" class="flex flex-column flex-justify-content-space-around flex-wrap">
         <div>
-          <mat-card-title class="text-left txtSize20">
+          <mat-card-title class="card__title text-left">
             {{job.companyName}}
           </mat-card-title>
           <mat-card-subtitle class="text-left txtSize18">
@@ -13,12 +13,12 @@
           </mat-card-subtitle>
         </div>
         <div>
-        <mat-card-content class="text-left txtSize16">
+        <mat-card-content class="card__snippet text-left txtSize16">
           {{job.description}}
         </mat-card-content>
         </div>
         <div>
-          <mat-card-action class="text-center">
+          <mat-card-action class="card__detail text-center">
             <button mat-raised-button color="primary" (click)="openDialog(job)">
               Project detail
             </button>

@@ -26,5 +26,15 @@ export class DashboardComponent implements OnInit {
 
   }
 
+  show_project_comp=false;
+  show_learning_comp=false;
+
+  @HostListener("document:scroll")
+  scrollPage(){
+    console.log(document.body.scrollTop);
+    (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) ? this.show_project_comp=true : this.show_project_comp = false;
+    (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) ? this.show_learning_comp=true : this.show_learning_comp = false;
+  }
+
 
 }
