@@ -31,6 +31,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
 import { LearningProjectComponent } from './components/learning-project/learning-project.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { TestCodeComponent } from './components/test-code/test-code.component';
+import { OnHoverEffectDirective } from './directives/on-hover-effect.directive';
 
 
 
@@ -43,7 +45,9 @@ import { FooterComponent } from './components/footer/footer.component';
     ContactMeComponent,
     LearningProjectComponent,
     DialogOverviewExampleDialog,
-    FooterComponent
+    FooterComponent,
+    TestCodeComponent,
+    OnHoverEffectDirective
   ],
   imports: [
     BrowserModule,
@@ -61,7 +65,8 @@ import { FooterComponent } from './components/footer/footer.component';
     FormsModule,
     ReactiveFormsModule,
     NgxSpinnerModule,
-    MatDialogModule
+    MatDialogModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

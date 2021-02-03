@@ -16,6 +16,12 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
    ]
 })
 export class DashboardComponent implements OnInit {
+  name = 'Angular';
+  image1 = 'Angular'
+  image2 = 'Miro'
+  image3 = 'row'
+  image4 = 'cory'
+  images = [this.image1, this.image2, this.image3, this.image4];
 
 
   constructor( ) { }

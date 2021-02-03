@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-learning-project',
@@ -24,10 +25,11 @@ export class LearningProjectComponent implements OnInit {
       }
     ]
 
-
-  constructor() { }
+  showAllProj : boolean = false;
+  constructor(public _router: Router) { }
 
   ngOnInit() {
+    this._router.url === "/projects" ? this.showAllProj = true : this.showAllProj = false;
   }
 
 }

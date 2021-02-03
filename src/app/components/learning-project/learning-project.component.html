@@ -1,42 +1,71 @@
-<section class="container-fluid learning-project-section">
-  <div class="flex text-center flex-justify-content-space-around flex-wrap">
-    <div *ngFor="let project of learningExp"
-      class="pad-10-all animate__animated animate__zoomIn">
-      <mat-card style="display: flex;" class="flex flex-column flex-justify-content-space-around">
+<article class="container-fluid learning-project-section">
+  <section *ngIf="showAllProj">
+    <div class="row mar-30-bottom">
+      <div class="col-12" style="text-align: left;">
         <div>
-          <mat-card-title class="text-left txtSize20">
-            {{project.projectName}}
-          </mat-card-title>
+          <h3 style="color: white;">
+            Personal Projects
+          </h3>
         </div>
-        <div>
-          <mat-card-subtitle class="text-left txtSize18">
-            {{project.techStack}}
-          </mat-card-subtitle>
-        </div>
+      </div>
+    </div>
+  </section>
 
-        <div>
+  <section>
+    <div class="flex text-center flex-justify-content-space-around flex-wrap">
+      <div *ngFor="let project of learningExp" class="pad-10-all animate__animated animate__zoomIn">
+        <div class="divParent">
+          <div class="div1"></div>
 
-        <mat-card-content class="text-left txtSize16">
-          {{project.description}}
-        </mat-card-content>
-        </div>
+          <mat-card class=" card-learning-proj flex flex-column flex-justify-content-space-around">
 
-        <div>
-          <mat-card-action class="text-center">
-            <div class="flex flex-row flex-wrap flex-justify-content-space-around">
-              <button mat-raised-button color="primary">
-                Code
-              </button>
-              <button mat-raised-button color="primary">
-                Demo
-              </button>
+            <div class="card-onHover">
+              <p>
+                This is another box {{i}}
+              </p>
             </div>
 
-          </mat-card-action>
+
+            <div>
+              <div>
+                <mat-card-title class="text-left txtSize20">
+                  {{project.projectName}}
+                </mat-card-title>
+              </div>
+              <div>
+                <mat-card-subtitle class="text-left txtSize18">
+                  {{project.techStack}}
+                </mat-card-subtitle>
+              </div>
+
+              <div>
+
+                <mat-card-content class="text-left txtSize16">
+                  {{project.description}}
+                </mat-card-content>
+              </div>
+
+              <div>
+                <mat-card-action class="text-center">
+                  <div class="flex flex-row flex-wrap flex-justify-content-space-around">
+                    <button mat-raised-button color="primary">
+                      Code
+                    </button>
+                    <button mat-raised-button color="primary">
+                      Demo
+                    </button>
+                  </div>
+
+                </mat-card-action>
+              </div>
+            </div>
+          </mat-card>
+
         </div>
 
-      </mat-card>
+      </div>
     </div>
-  </div>
 
-</section>
+  </section>
+
+</article>

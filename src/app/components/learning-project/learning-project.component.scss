@@ -1,16 +1,53 @@
 .learning-project-section {
-  mat-card {
+  mat-card,
+  .card-learning-proj {
     flex: 1 0 300px;
-    max-width: 400px;
-    height: 300px;
+    max-width: 350px;
+    height: 400px;
     background-color: white;
     color: black;
     font-size: 1rem;
     transition: all 200ms ease-in-out;
+    position: relative;
+
+    .card-default {
+      width: 100%;
+      height: 100%;
+      transition: opacity 200ms ease-in;
+    }
+
+    .card-onHover {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background: black;
+      border: 3px solid greenyellow;
+      border-radius: 10px;
+      // background-image: linear-gradient(to bottom, #fa709a 0%, #fee140 100%);
+      background: #16A085;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to bottom, #F4D03F, #16A085);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to bottom, #F4D03F, #16A085);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      transition: all 400ms ease-in-out;
+      opacity: 0;
+    }
 
     &:hover {
-      transform: translateY(-1rem);
-      box-shadow:  3px 5px 20px 1px lightcoral
+      transform: scale(1.1);
+    }
+
+    &:hover .card-onHover {
+      opacity: 100;
+    }
+
+    &:hover .card-default {
+      opacity: 0;
     }
 
     &__title {
@@ -19,5 +56,12 @@
     }
   }
 
+  @media (max-width:641px) {
+    .mat-card {
+      height: auto;
+    }
+  }
+
+  ;
 
 }
