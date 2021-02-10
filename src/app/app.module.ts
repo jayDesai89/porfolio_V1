@@ -33,6 +33,7 @@ import { LearningProjectComponent } from './components/learning-project/learning
 import { FooterComponent } from './components/footer/footer.component';
 import { TestCodeComponent } from './components/test-code/test-code.component';
 import { OnHoverEffectDirective } from './directives/on-hover-effect.directive';
+import { HeaderDrawerComponent } from './components/header/header-drawer/header-drawer.component';
 
 
 
@@ -47,7 +48,8 @@ import { OnHoverEffectDirective } from './directives/on-hover-effect.directive';
     DialogOverviewExampleDialog,
     FooterComponent,
     TestCodeComponent,
-    OnHoverEffectDirective
+    OnHoverEffectDirective,
+    HeaderDrawerComponent
   ],
   imports: [
     BrowserModule,

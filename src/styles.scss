@@ -4,7 +4,7 @@
 @import "variables";
 
 
-html, body { height: 100%; }
+html, body { height: 100%; scroll-behavior: smooth; display: block; margin: 8px;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .container {
@@ -157,6 +157,9 @@ flex-no-wrap {
   align-items: flex-start;
 }
 
+.flex-align-center {
+  align-items: center;
+}
 
 
 // FLEX END //
@@ -345,9 +348,3 @@ flex-no-wrap {
   background-color:white;
 }
 
-
-.projectDetailBackdrop {
-  // filter: blur(20px);
-  // background-color: black;
-  // opacity: 0.7 !important;
-}

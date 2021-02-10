@@ -12,7 +12,7 @@ export class OnHoverEffectDirective {
   @HostListener('mouseover') onMouseOver() {
     // Get the element first in ur case div
     let showThisDiv = this.el.nativeElement.querySelector('.box2');
-    this.renderer.setStyle(showThisDiv,'display','block');
+    this.renderer.setStyle(showThisDiv, 'display','block');
     this.showThisDiv =true;
   }
 
@@ -21,6 +21,6 @@ export class OnHoverEffectDirective {
     // Get the element first in ur case div
     let showThisDiv = this.el.nativeElement.querySelector('.box2');
     this.renderer.setStyle(showThisDiv,'display','none');
-    this.showThisDiv= false;
+    this.showThisDiv = false;
   }
 }

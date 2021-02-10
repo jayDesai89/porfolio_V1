@@ -1,34 +1,33 @@
 <article class="container-fluid dashboard-section">
   <!-- Banner start -->
   <section class="banner-section">
-    <div class="flex flex-row flex-justify-content-space-between banner-div">
+    <div class="flex flex-row flex-justify-content-space-between banner-div flex-wrap">
       <!-- Banner Text -->
       <div class="banner-text-div">
-        <!-- <p class="banner-text">
-          Hi, I am Jay </p><br>
-          <div @onHover class="tech-word">
-            Web-Designer and Front-end Developer
-          </div>
-         <p>based in Ontario, Canada</p> -->
-         <p class="banner-text animate__animated animate__slideInLeft">
-           Hi, I am Jay <br>
-           Web Designer and a Front-end Developer <br>
-           based in Ontario, Canada
-         </p>
-         <p style="background-color: red;color: white;">
-          <!-- <fa-icon [icon]="faCoffee"></fa-icon> -->
-         </p>
+        <p class="banner-text animate__animated animate__slideInLeft">
+          Hi, I am Jay <br>
+          Web Designer and a Front-end Developer <br>
+          based in Ontario, Canada
+        </p>
       </div>
-      <!-- Banner Image-gif-->
-      <div class="banner-image-div">
-        <!-- <img class="banner-image" src="../../../assets/images/stockImages/dev_5_topView_Image.png" alt=""> -->
+      <!-- Mouse Scroll down div -->
+      <div class="hero flex flex-justify-content-center">
+        <a href="#exp-section" class="scroll-down">
+          <div class="mouse">
+            <span></span>
+          </div>
+          <div class="arrow">
+            <span></span>
+          </div>
+        </a>
       </div>
     </div>
+
   </section>
   <!-- Banner end -->
 
   <!-- Experience start -->
-  <section class="exp-section" style="margin-bottom: 5%;">
+  <section id="exp-section" class="exp-section" style="margin-top: 2%; margin-bottom: 5%;">
 
     <div class="exp-detail row mar-30-bottom">
       <div class="col-12" style="text-align: center;">
@@ -38,14 +37,14 @@
           </p>
           <span class="txtSize16">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
-             Nam repudiandae in neque fugit explicabo quam ea, repellat<br>
-              magni sint necessitatibus!
+            Nam repudiandae in neque fugit explicabo quam ea, repellat<br>
+            magni sint necessitatibus!
           </span>
         </div>
       </div>
     </div>
 
-  <app-portfolio-project *ngIf="show_project_comp"></app-portfolio-project>
+    <app-portfolio-project *ngIf="show_project_comp"></app-portfolio-project>
 
   </section>
   <!-- Experience end -->
@@ -61,8 +60,8 @@
           </p>
           <span class="txtSize16">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
-             Nam repudiandae in neque fugit explicabo quam ea, repellat<br>
-              magni sint necessitatibus!
+            Nam repudiandae in neque fugit explicabo quam ea, repellat<br>
+            magni sint necessitatibus!
           </span>
         </div>
       </div>

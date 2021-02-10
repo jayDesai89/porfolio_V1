@@ -38,7 +38,9 @@ export class DashboardComponent implements OnInit {
   @HostListener("document:scroll")
   scrollPage(){
     console.log(document.body.scrollTop);
+    // tslint:disable-next-line: max-line-length
     (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) ? this.show_project_comp=true : this.show_project_comp = false;
+    // tslint:disable-next-line: max-line-length
     (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) ? this.show_learning_comp=true : this.show_learning_comp = false;
   }
 

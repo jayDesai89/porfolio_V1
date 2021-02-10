@@ -2,45 +2,136 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300");
 
 
-.app-header {
+.app-header-previous  {
   color: $white;
   background-color: $black;
   padding: 1% 15px;
   transition: all 300ms ease-in;
 
 
-  .app-heading {
-    color: white;
-    cursor: pointer;
-    a {
-      color: white;
+
+
+
+
+}
+
+
+.app-header {
+  display: flex;
+  color: $white;
+  background-color: $black;
+  // padding: 1% 15px;
+  // transition: all 300ms ease-in;
+  // border: 1px solid red;
+
+  .app-header-div {
+    display: flex;
+    flex-direction: row;
+    // border: 1px solid greenyellow;
+    width: 100%;
+
+    .app-header-left-div {
+      display: flex;
+      padding: 0px 10px;
+      width: 100%;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: black;
+
+      .app-heading {
+        color: white;
+        cursor: pointer;
+        a {
+          color: white;
+        }
+      }
+    }
+
+    .app-header-right-div {
+      display: flex;
+      padding: 0px 10px;
+      width: 100%;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: black;
+      .navbar {
+        padding-right: 0px;
+
+        ul > li {
+          padding: 0px 15px;
+          margin: 0px 10px;
+        }
+
+        ul > li:last-child{
+          padding: 0px 15px 0px 15px;
+          margin: 0px 0px 0px 10px;
+        }
+
+        .nav-link {
+          color: white;
+          cursor: pointer;
+          font-weight: normal;
+          transition: all 100ms ease-in-out;
+        }
+
+        .nav-link-active-li {
+          background-color: white;
+          border-radius: 20px;
+          transition: all 100ms ease-in-out;
+
+          .nav-link-active {
+            font-weight: bold;
+            color: black;
+          }
+        }
+
+      }
     }
   }
+}
+
+.phone-header {
+  width:100%;
+
+
+.app-header-div-mobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: black;
+}
+
+
+.app-header-toggle-button-div-mobile {
+  button {
+    background-color: black;
+  }
+}
+
+.app-mobile-nav {
+  display: flex;
+  background-color: black;
+  justify-content: center;
+
 
   .navbar {
     padding-right: 0px;
 
     ul > li {
       padding: 0px 15px;
-      margin: 0px 10px;
+      margin: 10px 10px;
     }
-
-    ul > li:last-child{
-      padding: 0px 15px 0px 15px;
-      margin: 0px 0px 0px 10px;
-    }
-
     .nav-link {
       color: white;
       cursor: pointer;
       font-weight: normal;
-      transition: all 300ms ease-in;
+      transition: all 100ms ease-in-out;
     }
 
     .nav-link-active-li {
       background-color: white;
       border-radius: 20px;
-      transition: all 300ms ease-in;
+      transition: all 100ms ease-in-out;
 
       .nav-link-active {
         font-weight: bold;
@@ -49,16 +140,13 @@
     }
 
   }
+  // position: fixed;
 
+  // ul > li {
+  // font-size: 1.25rem;
+  // padding: 1rem 0 0.5rem 0;
+  // color: rgba(50, 50, 50, 0.8);
+  // border-bottom: 1px solid rgba(20, 20, 20, 0.9);
+  // }
 }
-
-
-// On Page scroll apply below style
-.header_change {
-  .app-header {
-    padding: 0 2%;
-    transition: all 300ms ease-in;
-  }
 }
-
-
