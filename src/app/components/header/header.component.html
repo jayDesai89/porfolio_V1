@@ -1,16 +1,16 @@
   <section class="app-header">
 
     <!-- Web top navigation -->
-    <div *ngIf="!showMobileToggle" class="web-header app-header-div container-fluid" id="navbar">
+    <div *ngIf="!showMobileToggle" class="web-header app-header-div container-fluid animate__animated animate__backInDown" id="navbar">
       <div class="app-header-left-div">
         <div class="gradient-border">
-          <h1 class="app-heading" routerLink="/dashboard">
-            Jay Desai
-          </h1>
+          <p class="app-heading" routerLink="/dashboard">
+            JD
+          </p>
         </div>
       </div>
       <div class="app-header-right-div">
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg" role="navigation">
           <button class="navbar-toggler" style="background-color: white;" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -37,20 +37,22 @@
     <div *ngIf="showMobileToggle" class="phone-header animate__animated animate__fadeInLeft" id="navbar">
       <!--1st Row flex box -->
       <div class="app-header-div-mobile flex">
-        <div class="mobile-title">
-          <strong> Jay 2</strong>
+        <div class="gradient-border">
+          <p class="app-heading" routerLink="/dashboard">
+            JD
+          </p>
         </div>
         <div class="app-header-toggle-button-div-mobile">
           <button mat-raised-button (click)="showSideBar = !showSideBar">
-            <img  *ngIf="showSideBar" src="../../../assets/icons/x(2).svg" alt="">
-            <img *ngIf="!showSideBar"  src="../../../assets/icons/menu.svg" alt="">
+            <img  *ngIf="showSideBar" src="../../../assets/icons/x(2).svg" alt="icon close">
+            <img *ngIf="!showSideBar"  src="../../../assets/icons/menu.svg" alt="icon menu">
           </button>
         </div>
       </div>
       <!--2nd Row flex box -->
       <div *ngIf="showSideBar" class="app-mobile-nav" [@slideDownUp]>
         <div class="link-div">
-          <nav class="navbar navbar-expand-lg">
+          <nav class="navbar navbar-expand-lg" role="navigation">
             <div class="" id="navbarSupportedContent">
               <ul class="navbar-nav flex-justify-content-center flex-align-center">
                 <li routerLinkActive="nav-link-active-li" class="nav-item">

@@ -1,17 +1,18 @@
-<article class="container-fluid learning-project-section">
-  <section *ngIf="showAllProj">
-    <div class="row mar-30-bottom">
-      <div class="col-12" style="text-align: left;">
-        <div>
-          <h3 style="color: white;">
-            Personal Projects
-          </h3>
-        </div>
+<article class="container-fluid learning-project">
+
+  <!-- Banner start -->
+  <section *ngIf="showAllProj" class="banner-section">
+    <div class="flex flex-row flex-justify-content-space-between banner-div flex-wrap">
+      <!-- Banner Text -->
+      <div class="banner-text-div" style="padding: 5%;color: white;width: 100%;">
+        <h2 class="banner-text animate__animated animate__slideInLeft" color="white">
+          Side projects
+        </h2>
       </div>
-    </div>
+      </div>
   </section>
 
-  <section>
+  <!-- <section>
     <div class="flex text-center flex-justify-content-space-around flex-wrap">
       <div *ngFor="let project of learningExp" class="pad-10-all animate__animated animate__zoomIn">
         <div class="divParent">
@@ -63,6 +64,73 @@
 
         </div>
 
+      </div>
+    </div>
+
+  </section> -->
+
+
+  <section>
+    <div class="flex text-center flex-justify-content-space-around flex-wrap">
+      <div *ngFor="let project of learningExp" class=" some pad-10-all animate__animated animate__zoomIn"
+        style="margin-bottom: 5%;">
+        <mat-card class="card-project flex flex-column flex-justify-content-space-around flex-wrap">
+          <!-- On Hover Card Info - Start -->
+          <div class="card-onHover flex flex-column flex-justify-content-space-around flex-wrap"
+            style="align-items: center; padding: 15px;">
+            <!-- <mat-card-title class="card__title">
+              <div>
+                <img src="../../../assets/images/exp_companies/{{job.companyLogo}}" alt="bell-logo"
+                  [style.width]="job.companyLogoWidth">
+              </div>
+            </mat-card-title> -->
+
+            <mat-card-content class="card__snippet txtSize16">
+              <div class="flex flex-row flex-justify-content-center flex-wrap">
+                <div class="tech-stack-pill" *ngFor="let tech of project.techStack">
+                  {{tech}}
+                </div>
+              </div>
+            </mat-card-content>
+            <div class="w-100">
+              <mat-card-action class="flex flex-justify-content-space-around card__detail text-center">
+                <button class="proj-detail-btn-hover" mat-raised-button color="primary">
+                  Code
+                </button>
+
+                <button class="proj-detail-btn-hover" mat-raised-button color="primary">
+                  Demo
+                </button>
+              </mat-card-action>
+            </div>
+
+          </div>
+          <!-- On Hover Card Info - End -->
+          <!-- Default Card Info - Start -->
+          <div class="card-default flex flex-column flex-justify-content-space-around flex-wrap">
+            <div>
+              <mat-card-title class="card__title text-left">
+                {{project.projectName}}
+              </mat-card-title>
+              <mat-card-subtitle class="text-left txtSize18">
+                {{project.techStack}}
+              </mat-card-subtitle>
+            </div>
+            <div>
+              <mat-card-content class="card__snippet text-left txtSize16">
+                {{project.description}}
+              </mat-card-content>
+            </div>
+            <div>
+              <mat-card-action class="card__detail text-center">
+                <!-- <button mat-raised-button color="primary" (click)="openDialog(job)">
+                  Project detail
+                </button> -->
+              </mat-card-action>
+            </div>
+          </div>
+          <!-- Default Card Info - End -->
+        </mat-card>
       </div>
     </div>
 

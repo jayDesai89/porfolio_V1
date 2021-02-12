@@ -1,57 +1,57 @@
-<article class="container-fluid dashboard-section">
+<article class="container-fluid dashboard">
   <!-- Banner start -->
-  <section class="banner-section">
+  <section class="banner-section" style="">
     <div class="flex flex-row flex-justify-content-space-between banner-div flex-wrap">
       <!-- Banner Text -->
-      <div class="banner-text-div">
-        <p class="banner-text animate__animated animate__slideInLeft">
-          Hi, I am Jay <br>
-          Web Designer and a Front-end Developer <br>
-          based in Ontario, Canada
-        </p>
-      </div>
-      <!-- Mouse Scroll down div -->
-      <div class="hero flex flex-justify-content-center">
-        <a href="#exp-section" class="scroll-down">
-          <div class="mouse">
-            <span></span>
-          </div>
-          <div class="arrow">
-            <span></span>
-          </div>
-        </a>
-      </div>
+      <h1 class="banner-text animate__animated animate__slideInLeft">
+        Hi, I am Jay <br>
+        Web Designer and a Front-end Developer <br>
+        based in Ontario, Canada
+      </h1>
+      <p class="txtSize30 mar-h-25">
+        Developing amazing user experience one pixel at a time
+      </p>
     </div>
 
+    <!-- Mouse Scroll down div -->
+    <!-- style="margin:5% 0 3% 0;" -->
+    <div class="hero flex flex-justify-content-center">
+      <a href="#exp-section" class="scroll-down">
+        <div class="mouse">
+          <span></span>
+        </div>
+      </a>
+    </div>
+    <!-- Banner end -->
   </section>
-  <!-- Banner end -->
+
+
 
   <!-- Experience start -->
-  <section id="exp-section" class="exp-section" style="margin-top: 2%; margin-bottom: 5%;">
-
-    <div class="exp-detail row mar-30-bottom">
-      <div class="col-12" style="text-align: center;">
-        <div>
+  <section id="exp-section" class="exp-section">
+    <div class="row mar-30-bottom">
+      <div class="col-12  text-center">
+        <div class="exp-detail">
           <p class="txtSize30" aria-label="Experience">
             Featured Projects
           </p>
           <span class="txtSize16">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
-            Nam repudiandae in neque fugit explicabo quam ea, repellat<br>
-            magni sint necessitatibus!
+            Over 5 years of professional experience in web-based business application development,
+            focusing on the presentation layer (UI/UX) as a UI/UX Front End Developer.
+            Firsthand experience on the Software Development Life Cycle (SDLC) of Agile methodology
+            including UX Design, implementation, testing, deployment, and maintenance.
           </span>
         </div>
       </div>
     </div>
 
-    <app-portfolio-project *ngIf="show_project_comp"></app-portfolio-project>
+    <app-portfolio-project></app-portfolio-project>
 
   </section>
   <!-- Experience end -->
 
   <!-- Personal Projects -->
   <section style="margin-bottom: 5%;">
-
     <div class="row mar-30-bottom">
       <div class="col-12" style="text-align: center;">
         <div>
@@ -67,7 +67,7 @@
       </div>
     </div>
 
-    <app-learning-project *ngIf="show_learning_comp"></app-learning-project>
+    <app-learning-project></app-learning-project>
 
   </section>
   <!-- Personal Projects -->

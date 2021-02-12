@@ -1,5 +1,5 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, ElementRef, HostBinding, HostListener, Inject, OnInit, Renderer2 } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostBinding, HostListener, Inject, OnInit, Renderer2 } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { Router } from '@angular/router';
 
@@ -11,65 +11,58 @@ import { Router } from '@angular/router';
     trigger('onHover', [
       transition('void => *', [
         style({ backgroundColor: 'yellow', opacity: 0}),
-        animate(2000, style({backgroundColor:'white', opacity: 0}))
+        animate(2000, style({backgroundColor: 'white', opacity: 0}))
       ])
     ])
   ]
 })
-export class PortfolioProjectComponent implements OnInit {
+export class PortfolioProjectComponent implements OnInit, AfterViewInit {
   imagePath = '../../../assets/images/exp_companies';
+  getCardEl;
+  showOnHoverDiv: boolean;
   experience = [
   {
-      'companyName' : 'Bell',
-      'position': 'Solution Architecture / UI Web Developer',
-      'techStack': ['HTML5','CSS','Bootstrap4','jQuery','Angular 4+','Typescript'],
-      'description': "Bell is Canada's leading communication company.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ipsum.",
-      'companyLogo': 'bell_logo.png',
-      'companyLogoWidth': '35%'
+      companyName : 'Bell',
+      position: 'UI Web Developer / Solution Architecture',
+      techStack: ['HTML5', 'CSS', 'Bootstrap4', 'jQuery', 'Angular 4+', 'Typescript'],
+      // tslint:disable-next-line: max-line-length
+      description: 'Bell is Canada’s largest telecommunications company which provides Mobile phone, TV, high speed and wireless internet, and residential home phones services',
+      companyLogo: 'bell_logo.png',
+      companyLogoWidth: '35%'
     },
      {
-      'companyName' : 'BGIS',
-      'position': 'Senior UI/UX Designer and Developer',
-      'techStack': ['HTML5','CSS','Bootstrap4','jQuery','Angular 4+','Typescript'],
-      'description': "Brookfield Global Integrated Solutions.Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ipsum.",
-      'companyLogo': 'isdr.png',
-      'companyLogoWidth': '100%'
+      companyName : 'BGIS',
+      position: 'Senior UI/UX Designer and Developer',
+      techStack: ['HTML5', 'CSS', 'Bootstrap4', 'jQuery', 'Angular 4+', 'Typescript'],
+      // tslint:disable-next-line: max-line-length
+      description: 'Brookfield Global Integrated Solutions is one of the largest providers of property management and project delivery services',
+      companyLogo: 'bgis.png',
+      companyLogoWidth: '100%'
     },
      {
-      'companyName' : 'ISDR',
-      'position': 'UI/UX Developer',
-      'techStack': ['HTML5','CSS','Bootstrap4','jQuery','Angular 4+','Typescript'],
-      'description': "Issuer Direct corporation is a public listed company in united state. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ipsum.",
-      'tech-stack': ['HTML5','CSS3','Bootstrap4','JavaScript','jQuery','Angular 6+'],
-      'companyLogo': 'bgis.png',
-      'companyLogoWidth': '100%'
+      companyName : 'ISDR',
+      position: 'UI/UX Developer',
+      techStack: ['HTML5', 'CSS', 'Bootstrap4', 'jQuery', 'Angular 4+', 'Typescript'],
+      // tslint:disable-next-line: max-line-length
+      description: 'Issuer Direct Corporation is a public listed USA based company, it provides services such as communications and compliance based on the needs of corporate issuers.',
+      'tech-stack': ['HTML5', 'CSS3', 'Bootstrap4', 'JavaScript', 'jQuery', 'Angular 6+'],
+      companyLogo: 'isdr.png',
+      companyLogoWidth: '100%'
     }
-  ]
-  showTitle: boolean = false;
-  // showHoverdiv: boolean = false ;
+  ];
+  showTitle = false;
 
 
 
   constructor(public dialog: MatDialog,
-    private _router: Router,
-    private el : ElementRef,
-    private renderer: Renderer2) { }
-
-    // @HostBinding() showHoverdiv : boolean = false;
-
-    // @HostListener('mouseover') onMouseover() {
-    //   let testEl = this.el.nativeElement.querySelector('.testSome');
-    //   console.log(testEl);
-    //   this.showHoverdiv = true;
-    // }
-
-    // @HostListener('mouseout') onMouseout() {
-    //   let testEl = this.el.nativeElement.querySelector('.testSome');
-    //   this.showHoverdiv = false;
-    // }
+              // tslint:disable-next-line: variable-name
+              private _router: Router,
+              private el: ElementRef,
+              private renderer: Renderer2) { }
 
 
-  openDialog(val : any): void {
+
+  openDialog(val: any): void {
     // console.log(val);
     //  this.projectDetailForModal = val;
     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
@@ -81,7 +74,7 @@ export class PortfolioProjectComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed', result);
-      if(result) {
+      if (result) {
         this._router.navigateByUrl('/projects');
       }
       // this.animal = result;
@@ -90,8 +83,23 @@ export class PortfolioProjectComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._router.url === "/projects" ? this.showTitle = true : this.showTitle = false;
+    this._router.url === '/projects' ? this.showTitle = true : this.showTitle = false;
   }
+
+  ngAfterViewInit(): void {
+   this.getCardEl = this.el.nativeElement.querySelector('.card-project');
+  }
+
+  // @HostListener('mouseover', ['$event']) mouseenter(e) {
+  //   // this.showOnHoverDiv = true;
+  //   console.log(e);
+  // }
+
+  // @HostListener('mouseout') mouseout() {
+  //   // this.showOnHoverDiv = false;
+  //   console.log(this.showOnHoverDiv);
+  // }
+
 
 }
 
@@ -102,15 +110,12 @@ export class PortfolioProjectComponent implements OnInit {
   templateUrl: 'project-detail-modal.html',
 })
 export class DialogOverviewExampleDialog implements OnInit {
-  //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-  //Add 'implements OnInit' to the class.
-
 
   constructor(
     public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
     @Inject(MAT_DIALOG_DATA) public data: PortfolioProjectComponent) {}
     projectForModal;
-    gotoFolio : boolean = false;
+    gotoFolio = false;
 
 
     ngOnInit(): void {

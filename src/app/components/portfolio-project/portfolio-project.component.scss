@@ -1,21 +1,50 @@
-.experience-project-section {
+.experience-project {
   // padding: 2%;
+
+  .page-title-div {
+    padding: 5%;
+    color: white;
+    width: 100%;
+    h1 {
+      font-weight: normal;
+    }
+  }
 
   mat-card,
   .card-project {
     flex: 1 0 300px;
     max-width: 350px;
-    height: 400px;
+    height: 350px;
     background-color: white;
     color: black;
     font-size: 1rem;
     transition: all 200ms ease-in-out;
     position: relative;
 
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 0%;
+       background-image: linear-gradient(to bottom, #fa709a 0%, #fee140 100%);
+      background: #11998e;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to bottom, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to bottom, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      transition: all 400ms ease-in-out;
+      opacity: 1;
+    }
+
     .card-default {
       width: 100%;
       height: 100%;
       transition: opacity 200ms ease-in;
+
+      .card-title {
+        font-size: bolder;
+        font-size: 1.4em;
+      }
     }
 
     .card-onHover {
@@ -25,61 +54,162 @@
       top: 0;
       left: 0;
       z-index: 1;
-      background: black;
-      border: 3px solid greenyellow;
-      border-radius: 10px;
-      // // background-image: linear-gradient(to bottom, #fa709a 0%, #fee140 100%);
-      // background: #16A085;
-      // /* fallback for old browsers */
-      // background: -webkit-linear-gradient(to bottom, #F4D03F, #16A085);
-      // /* Chrome 10-25, Safari 5.1-6 */
-      // background: linear-gradient(to bottom, #F4D03F, #16A085);
-      // /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-      background: #00d2ff;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, white #3a7bd5);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, white,#3a7bd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-      transition: all 400ms ease-in-out;
       opacity: 0;
-
+      border-radius: 10px;
       .tech-stack-pill {
-        border-bottom: 4px solid black;
-        color: white;
+        border-bottom: 2px solid black;
+        color: black;
         padding: 5px;
         margin: 5px;
       }
 
-      .proj-detail-btn-hover {
-        padding: 10px 10px;
+      &:hover {
+        width: 100%;
+        height: 100%;
+        transition: all 300ms ease-in-out;
+        opacity: 1;
+      }
+
+      .btn.btn1.proj-detail-btn {
+        width: 60%;
+        background: black;
+        color:white;
+
+        &:hover {
+          color: black;
+          border: 1px solid black;
+        }
       }
     }
 
-    &:hover {
-      border-radius: 10px;
-      transform: scale(1.1);
-    }
 
-    &:hover .card-onHover {
-      opacity: 100;
-    }
-
-    &:hover .card-default {
-      opacity: 0;
-    }
-
-    &__title {
-      font-size: 1.7rem;
-      font-weight: 700px;
-    }
   }
 
-  @media (max-width:641px) {
-    .mat-card {
-      height: auto;
-    }
-  }
 
-  ;
+
+  .card-project:hover::before {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    transform: scale(1.06);
+    transition: all 200ms ease-in-out;
+  }
 }
+
+
+.btn-container {
+  margin-bottom: 5%;
+  button{
+    width: 30%;
+    border: 3px solid !important;
+    font-weight: bold;
+  }
+}
+
+
+.container,
+.card-project {
+  text-align: center;
+  margin-top: 2%;
+  .btn {
+    border: 1px solid #3498db;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 0%;
+      background: #3498db;
+      z-index: -1;
+      transition: 0.8s;
+    }
+  }
+
+  .btn1,
+  .btn2 {
+    color: #3498db;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .btn3,
+  .btn4 {
+    color: white;
+
+    &:hover {
+      color: #3498db;
+    }
+  }
+
+  .btn1::before,
+  .btn3::before {
+    top: 0;
+    border-radius: 0 0 50% 50%;
+  }
+
+  .btn2::before,
+  .btn4::before {
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+  }
+
+  .btn3::before,
+  .btn4::before {
+    height: 180%;
+  }
+
+  .btn1:hover::before,
+  .btn2:hover::before {
+    height: 180%;
+  }
+
+  .btn3:hover::before,
+  .btn4:hover::before {
+    height: 0%;
+  }
+}
+
+
+// ######################################### Media query #########################################
+/* smartphones, iPhone, portrait 480x320 phones */
+@media screen and (min-width:320px)  {  };
+/* port and rait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+@media screen and (max-width:481px)  {
+  .exp-detail {
+    width: 100%;
+  }
+
+  mat-card,
+  .card-project {
+    flex: 1 0 auto;
+    max-width: 100%;
+    height: 100%x;
+  }
+ };
+/* port and rait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+@media screen and (max-width:641px)  {
+  .proj-detail-btn-hover {
+    width: auto;
+  }
+
+  .btn {
+    margin: auto;
+  }
+ };
+/* tabl and et, landscape iPad, lo-res laptops ands desktops */
+@media screen and (min-width:961px)  {  }
+/* big and landscape tablets, laptops, and desktops */
+@media screen and (min-width:1025px) {  }
+/* hi-r and es laptops and desktops */
+@media screen and (min-width:1281px) {  }

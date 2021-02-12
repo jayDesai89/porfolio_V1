@@ -1,123 +1,168 @@
 @import '../../../variables.scss';
 
-.dashboard-section {
+.dashboard {
   background-color: $black;
   color: white;
+  // height: 65vh;
 
-  .banner-div {
-    background-color: black;
-    color: white;
-    height: 100%;
-  }
-
-  .banner-text-div {
-    width: 100%;
-    padding: 5% 3%;
-    margin: auto;
-    margin-bottom: 5%;
-    .banner-text {
-      font-size: 3em;
-    }
-  }
-
-  .banner-image {
-    height: 100%;
-    width: 100%;
-  }
-
-  @media (min-width:1025px) {
-    .banner-text {
-      font-size: 1em;
-    }
-  }
-
-}
-
-.hero {
-  width: 100%;
-  margin-top: auto;
-  .scroll-down {
+  .banner-section {
+    // height: 90vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+
+
+    .banner-div {
+      color: white;
+      text-align: left;
+      padding: 10% 5%;
+      .banner-text {
+        font-size: 3em;
+        font-weight: normal;
+      }
+    }
+
+    .banner-image {
+      height: 100%;
+      width: 100%;
+    }
+
   }
 
-  .mouse {
-    width: 2.5rem;
-    height: 5rem;
-    border: 2px solid white;
-    border-radius: 2rem;
-    margin-bottom: .5rem;
-    display: flex;
+  .hero {
+    width: 100%;
 
-    span {
-      width: 1rem;
-      height: 1rem;
-      background-color: white;
-      display: block;
-      border-radius: 50%;
-      margin:auto;
-      animation: move-wheel 1s linear infinite;
+    .scroll-down {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .mouse {
+      width: 2.5rem;
+      height: 5rem;
+      border: 2px solid white;
+      border-radius: 2rem;
+      margin-bottom: .5rem;
+      display: flex;
+
+      span {
+        width: 1rem;
+        height: 1rem;
+        background-color: white;
+        display: block;
+        border-radius: 50%;
+        margin: auto;
+        animation: move-wheel 1s linear infinite;
+      }
+    }
+
+    .arrow {
+      span {
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        border: 2px solid transparent;
+        border-right-color: white;
+        border-bottom-color: white;
+        transform: rotate(45deg);
+        animation: arrow-down 0.5s alternate infinite;
+      }
+    }
+
+    @keyframes move-wheel {
+      0% {
+        opacity: 0;
+        transform: translateY(-1rem);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(1rem);
+      }
+    }
+
+
+    @keyframes arrow-down {
+      0% {
+        opacity: 0;
+      }
+
+      25% {
+        opacity: 0.25;
+      }
+
+      50% {
+        opacity: 0.50;
+      }
+
+      75% {
+        opacity: 0.75;
+      }
+
+      100% {
+        opacity: 1;
+      }
     }
   }
 
-  .arrow {
-    span {
-      display: block;
-      width: 1rem;
-      height: 1rem;
-      border : 2px solid transparent;
-      border-right-color: white;
-      border-bottom-color: white;
-      transform: rotate(45deg);
-      animation: arrow-down 0.5s alternate infinite;
+  .exp-section {
+    margin-top: 3%;
+    .exp-detail {
+      width: 50%;
+      margin: auto;
     }
-  }
 
-  @keyframes move-wheel {
-    0%{
-      opacity: 0;
-      transform: translateY(-1rem);
-    }
-    100%{
-      opacity: 1;
-      transform: translateY(1rem);
-    }
   }
 
 
-  @keyframes arrow-down {
-    0%{
-      opacity: 0;
-    }
-    25%{
-      opacity: 0.25;
-    }
-    50%{
-      opacity: 0.50;
-    }
-    75%{
-      opacity: 0.75;
-    }
-    100%{
-      opacity: 1;
-    }
-  }
+}
+
+/* smartphones, iPhone, portrait 480x320 phones */
+@media screen and (max-width:480px) {
+
 }
 
 
-/* smartphones, iPhone, portrait 480x320 phones */
-@media (min-width:320px)  {  };
-/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-@media (min-width:481px)  {  };
+
 /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-@media (min-width:641px)  {
-  .banner-text-div {
-    width: 100%;
-    padding: 1%;
-    margin-bottom: 3%;
-    .banner-text {
-      font-size: 2em;
-    }
+// @media (max-width:641px) {
+//   .dashboard-section {
+//     height: 100%;
+//   }
+
+//   .banner-text-div {
+//     width: 100%;
+//     padding: 1%;
+//     margin-bottom: 3%;
+//   }
+
+//   .banner-text {
+//     font-size: 2em !important;
+//   }
+// }
+
+
+// ######################################### Media query #########################################
+/* smartphones, iPhone, portrait 480x320 phones */
+@media screen and (min-width:320px)  {  };
+/* port and rait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+@media screen and (max-width:481px)  {
+  .exp-detail {
+    width: 100% !important;
+    background-color: red;
   }
- }
+ };
+/* port and rait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+@media screen and (max-width:641px)  {
+  .banner-text {
+    font-size: 2em !important;
+    color: yellowgreen
+  }
+ };
+/* tabl and et, landscape iPad, lo-res laptops ands desktops */
+@media screen and (min-width:961px)  {  }
+/* big and landscape tablets, laptops, and desktops */
+@media screen and (min-width:1025px) {  }
+/* hi-r and es laptops and desktops */
+@media screen and (min-width:1281px) {  }

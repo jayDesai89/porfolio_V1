@@ -36,7 +36,7 @@ export class HeaderComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     this.innerWidth = window.innerWidth;
-    if (this.innerWidth < 768) {
+    if (this.innerWidth < 992) {
       this.showMobileToggle = true;
     } else {
       this.showMobileToggle = false;

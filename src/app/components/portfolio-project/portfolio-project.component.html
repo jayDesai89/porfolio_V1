@@ -1,21 +1,20 @@
-<article class="container-fluid experience-project-section">
+<article class="container-fluid experience-project">
 
-  <section *ngIf="showTitle">
-    <div class="row mar-30-bottom">
-      <div class="col-12" style="text-align: left;">
-        <div>
-          <h2 style="color: white;">
-            Projects
-          </h2>
-        </div>
+  <!-- Banner start -->
+  <section *ngIf="showTitle" class="page-title">
+    <div class="flex flex-row flex-justify-content-space-between banner-div flex-wrap">
+      <!-- Banner Text -->
+      <div class="page-title-div">
+        <h1 class="banner-text animate__animated animate__slideInLeft" color="white">
+          Portfolio projects
+        </h1>
       </div>
     </div>
   </section>
 
-  <section>
+  <section class="project-card-section">
     <div class="flex text-center flex-justify-content-space-around flex-wrap">
-      <div *ngFor="let job of experience;let i = index" class="pad-10-all animate__animated animate__zoomIn"
-        style="margin-bottom: 5%;">
+      <div *ngFor="let job of experience;let i = index" class=" project-card-section pad-10-all animate__animated animate__zoomIn">
         <mat-card class="card-project flex flex-column flex-justify-content-space-around flex-wrap">
           <!-- On Hover Card Info - Start -->
           <div class="card-onHover flex flex-column flex-justify-content-space-around flex-wrap"
@@ -34,9 +33,10 @@
                 </div>
               </div>
             </mat-card-content>
-            <div>
-              <mat-card-action class="card__detail text-center">
-                <button class="proj-detail-btn-hover" mat-raised-button color="primary" (click)="openDialog(job)">
+            <div class="w-100">
+              <mat-card-action class="card__detail text-center w-100">
+                <button class="btn btn1 proj-detail-btn" mat-raised-button color="primary"
+                  (click)="openDialog(job)">
                   Project detail
                 </button>
               </mat-card-action>
@@ -48,22 +48,29 @@
           <div class="card-default flex flex-column flex-justify-content-space-around flex-wrap">
             <div>
               <mat-card-title class="card__title text-left">
-                {{job.companyName}}
+                <p class="card-title text-black">
+                  {{job.companyName}}
+                </p>
+
               </mat-card-title>
               <mat-card-subtitle class="text-left txtSize18">
-                {{job.position}}
+                <p class="card-subtitle txtSize20 text-black">
+                  {{job.position}}
+                </p>
               </mat-card-subtitle>
             </div>
             <div>
               <mat-card-content class="card__snippet text-left txtSize16">
-                {{job.description}}
+                <p class="card-content company-info txtSize16">
+                  {{job.description}}
+                </p>
               </mat-card-content>
             </div>
             <div>
               <mat-card-action class="card__detail text-center">
-                <button mat-raised-button color="primary" (click)="openDialog(job)">
+                <!-- <button mat-raised-button color="primary" (click)="openDialog(job)">
                   Project detail
-                </button>
+                </button> -->
               </mat-card-action>
             </div>
           </div>
@@ -72,7 +79,18 @@
       </div>
     </div>
 
+
+
   </section>
+
+  <div *ngIf="!showTitle">
+    <div  class="container btn-container">
+      <button class="btn btn1" routerLink="/projects">
+        <span class="txtSize20">View All Projects</span>
+      </button>
+    </div>
+  </div>
+
 
   <section *ngIf="showTitle">
     <app-learning-project></app-learning-project>

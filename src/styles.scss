@@ -4,7 +4,7 @@
 @import "variables";
 
 
-html, body { height: 100%; scroll-behavior: smooth; display: block; margin: 8px;}
+html, body { height: 100%; scroll-behavior: smooth; display: block; margin: 8px; font-family: FontAvenirRegular;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .container {
@@ -42,6 +42,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .text-right {
   text-align: right;
+}
+
+.text-black {
+  color:black;
+}
+
+.text-white {
+  color: white;
 }
 
 

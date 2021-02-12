@@ -2,19 +2,6 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300");
 
 
-.app-header-previous  {
-  color: $white;
-  background-color: $black;
-  padding: 1% 15px;
-  transition: all 300ms ease-in;
-
-
-
-
-
-
-}
-
 
 .app-header {
   display: flex;
@@ -41,6 +28,9 @@
       .app-heading {
         color: white;
         cursor: pointer;
+        font-size: 40px;
+        margin: 0px;
+        font-weight: 400;
         a {
           color: white;
         }
@@ -80,7 +70,6 @@
           transition: all 100ms ease-in-out;
 
           .nav-link-active {
-            font-weight: bold;
             color: black;
           }
         }
@@ -92,17 +81,28 @@
 
 .phone-header {
   width:100%;
-
-
+  padding: 0px 10px;
 .app-header-div-mobile {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: black;
+
+  .app-heading {
+    color: white;
+    cursor: pointer;
+    font-size: 40px;
+    margin: 0px;
+    font-weight: 400;
+    a {
+      color: white;
+    }
+  }
 }
 
 
 .app-header-toggle-button-div-mobile {
+  padding: 11px 0px;
   button {
     background-color: black;
   }
@@ -140,13 +140,5 @@
     }
 
   }
-  // position: fixed;
-
-  // ul > li {
-  // font-size: 1.25rem;
-  // padding: 1rem 0 0.5rem 0;
-  // color: rgba(50, 50, 50, 0.8);
-  // border-bottom: 1px solid rgba(20, 20, 20, 0.9);
-  // }
 }
 }
