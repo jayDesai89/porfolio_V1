@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PortfolioProjectComponent } from './components/portfolio-project/portfolio-project.component';
+import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
    */
   {path: 'contactme', component: ContactMeComponent},
   {path: 'projects', component: PortfolioProjectComponent},
+  {path: 'projects/:companyName', component: ProjectDetailComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: '**', redirectTo: 'dashboard'}
 ];

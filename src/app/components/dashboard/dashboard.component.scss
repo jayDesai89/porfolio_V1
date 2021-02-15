@@ -15,99 +15,130 @@
     .banner-div {
       color: white;
       text-align: left;
-      padding: 10% 5%;
+      padding: 8% 5%;
+
       .banner-text {
         font-size: 3em;
         font-weight: normal;
       }
+
+      .call-action-btn-div {
+        justify-content: flex-start;
+        align-items: center;
+
+        button {
+          height: 50%;
+          margin-left: 1%;
+          padding: 1%;
+        }
+
+        .git-hub-btn {
+          transition: all 200ms ease-in-out;
+
+          &:hover {
+            transform: scale(1.2);
+            transition: all 200ms ease-in-out;
+          }
+        }
+
+        .scroll-down-btn {
+          // margin-left: 4%;
+        }
+      }
+
+
     }
 
-    .banner-image {
-      height: 100%;
-      width: 100%;
-    }
+
 
   }
 
-  .hero {
-    width: 100%;
-
-    .scroll-down {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .mouse {
-      width: 2.5rem;
-      height: 5rem;
-      border: 2px solid white;
-      border-radius: 2rem;
-      margin-bottom: .5rem;
-      display: flex;
-
-      span {
-        width: 1rem;
-        height: 1rem;
-        background-color: white;
-        display: block;
-        border-radius: 50%;
-        margin: auto;
-        animation: move-wheel 1s linear infinite;
-      }
-    }
-
-    .arrow {
-      span {
-        display: block;
-        width: 1rem;
-        height: 1rem;
-        border: 2px solid transparent;
-        border-right-color: white;
-        border-bottom-color: white;
-        transform: rotate(45deg);
-        animation: arrow-down 0.5s alternate infinite;
-      }
-    }
-
-    @keyframes move-wheel {
-      0% {
-        opacity: 0;
-        transform: translateY(-1rem);
-      }
-
-      100% {
-        opacity: 1;
-        transform: translateY(1rem);
-      }
-    }
-
-
-    @keyframes arrow-down {
-      0% {
-        opacity: 0;
-      }
-
-      25% {
-        opacity: 0.25;
-      }
-
-      50% {
-        opacity: 0.50;
-      }
-
-      75% {
-        opacity: 0.75;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
+  #stop-scroll-here {
+    margin-bottom: 5%;
+    height: 90px;
   }
+
+  // .hero {
+  //   width: 100%;
+
+  //   .scroll-down {
+  //     display: flex;
+  //     flex-direction: column;
+  //     align-items: center;
+  //   }
+
+  //   .mouse {
+  //     width: 2.5rem;
+  //     height: 5rem;
+  //     border: 2px solid white;
+  //     border-radius: 2rem;
+  //     margin-bottom: .5rem;
+  //     display: flex;
+
+  //     span {
+  //       width: 1rem;
+  //       height: 1rem;
+  //       background-color: white;
+  //       display: block;
+  //       border-radius: 50%;
+  //       margin: auto;
+  //       animation: move-wheel 1s linear infinite;
+  //     }
+  //   }
+
+  //   .arrow {
+  //     span {
+  //       display: block;
+  //       width: 1rem;
+  //       height: 1rem;
+  //       border: 2px solid transparent;
+  //       border-right-color: white;
+  //       border-bottom-color: white;
+  //       transform: rotate(45deg);
+  //       animation: arrow-down 0.5s alternate infinite;
+  //     }
+  //   }
+
+  //   @keyframes move-wheel {
+  //     0% {
+  //       opacity: 0;
+  //       transform: translateY(-1rem);
+  //     }
+
+  //     100% {
+  //       opacity: 1;
+  //       transform: translateY(1rem);
+  //     }
+  //   }
+
+
+  //   @keyframes arrow-down {
+  //     0% {
+  //       opacity: 0;
+  //     }
+
+  //     25% {
+  //       opacity: 0.25;
+  //     }
+
+  //     50% {
+  //       opacity: 0.50;
+  //     }
+
+  //     75% {
+  //       opacity: 0.75;
+  //     }
+
+  //     100% {
+  //       opacity: 1;
+  //     }
+  //   }
+  // }
 
   .exp-section {
     margin-top: 3%;
+    margin-bottom: 5%;
+
     .exp-detail {
       width: 50%;
       margin: auto;
@@ -115,13 +146,16 @@
 
   }
 
+  .learning-proj-section {
+    margin-top: 3%;
+    margin-bottom: 5%;
+  }
+
 
 }
 
 /* smartphones, iPhone, portrait 480x320 phones */
-@media screen and (max-width:480px) {
-
-}
+@media screen and (max-width:480px) {}
 
 
 
@@ -145,24 +179,53 @@
 
 // ######################################### Media query #########################################
 /* smartphones, iPhone, portrait 480x320 phones */
-@media screen and (min-width:320px)  {  };
+@media screen and (min-width:320px) {}
+
+;
+
 /* port and rait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-@media screen and (max-width:481px)  {
+@media screen and (max-width:481px) {
   .exp-detail {
     width: 100% !important;
-    background-color: red;
   }
- };
+
+  .scroll-down-btn {
+    width: 100% !important;
+  }
+
+}
+
+;
+
 /* port and rait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-@media screen and (max-width:641px)  {
+@media screen and (max-width:641px) {
   .banner-text {
     font-size: 2em !important;
-    color: yellowgreen
   }
- };
+
+  .banner-subtext {
+    font-size: 22px;
+  }
+
+  .call-action-btn-div {
+    button {
+      height: 100% !important;
+      margin: 2%;
+    }
+
+    .scroll-down-btn {
+      // margin-top: 4%;
+    }
+  }
+}
+
+;
+
 /* tabl and et, landscape iPad, lo-res laptops ands desktops */
-@media screen and (min-width:961px)  {  }
+@media screen and (min-width:961px) {}
+
 /* big and landscape tablets, laptops, and desktops */
-@media screen and (min-width:1025px) {  }
+@media screen and (min-width:1025px) {}
+
 /* hi-r and es laptops and desktops */
-@media screen and (min-width:1281px) {  }
+@media screen and (min-width:1281px) {}

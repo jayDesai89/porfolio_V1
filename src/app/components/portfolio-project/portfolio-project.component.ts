@@ -2,6 +2,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 import { AfterViewInit, Component, ElementRef, HostBinding, HostListener, Inject, OnInit, Renderer2 } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { SelectedProjectService } from 'src/app/service/getProject/selected-project.service';
 
 @Component({
   selector: 'app-portfolio-project',
@@ -22,6 +23,7 @@ export class PortfolioProjectComponent implements OnInit, AfterViewInit {
   showOnHoverDiv: boolean;
   experience = [
   {
+      id: 0,
       companyName : 'Bell',
       position: 'UI Web Developer / Solution Architecture',
       techStack: ['HTML5', 'CSS', 'Bootstrap4', 'jQuery', 'Angular 4+', 'Typescript'],
@@ -31,6 +33,7 @@ export class PortfolioProjectComponent implements OnInit, AfterViewInit {
       companyLogoWidth: '35%'
     },
      {
+      id: 1,
       companyName : 'BGIS',
       position: 'Senior UI/UX Designer and Developer',
       techStack: ['HTML5', 'CSS', 'Bootstrap4', 'jQuery', 'Angular 4+', 'Typescript'],
@@ -40,6 +43,7 @@ export class PortfolioProjectComponent implements OnInit, AfterViewInit {
       companyLogoWidth: '100%'
     },
      {
+      id: 2,
       companyName : 'ISDR',
       position: 'UI/UX Developer',
       techStack: ['HTML5', 'CSS', 'Bootstrap4', 'jQuery', 'Angular 4+', 'Typescript'],
@@ -58,29 +62,8 @@ export class PortfolioProjectComponent implements OnInit, AfterViewInit {
               // tslint:disable-next-line: variable-name
               private _router: Router,
               private el: ElementRef,
-              private renderer: Renderer2) { }
-
-
-
-  openDialog(val: any): void {
-    // console.log(val);
-    //  this.projectDetailForModal = val;
-    const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-      height: '80vh',
-      panelClass: 'projectDetail-section',
-      backdropClass: 'projectDetailBackdrop',
-      data: {project: val}
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed', result);
-      if (result) {
-        this._router.navigateByUrl('/projects');
-      }
-      // this.animal = result;
-
-    });
-  }
+              private renderer: Renderer2,
+              private projectService: SelectedProjectService) { }
 
   ngOnInit() {
     this._router.url === '/projects' ? this.showTitle = true : this.showTitle = false;
@@ -90,41 +73,11 @@ export class PortfolioProjectComponent implements OnInit, AfterViewInit {
    this.getCardEl = this.el.nativeElement.querySelector('.card-project');
   }
 
-  // @HostListener('mouseover', ['$event']) mouseenter(e) {
-  //   // this.showOnHoverDiv = true;
-  //   console.log(e);
-  // }
-
-  // @HostListener('mouseout') mouseout() {
-  //   // this.showOnHoverDiv = false;
-  //   console.log(this.showOnHoverDiv);
-  // }
-
+  showProjectDetail(job) {
+    const companyName = job.companyName;
+    this.projectService.getSelectedProject(job);
+    this._router.navigate([`projects/${companyName}`]);
+  }
 
 }
 
-
-
-@Component({
-  selector: 'project-detail-modal',
-  templateUrl: 'project-detail-modal.html',
-})
-export class DialogOverviewExampleDialog implements OnInit {
-
-  constructor(
-    public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: PortfolioProjectComponent) {}
-    projectForModal;
-    gotoFolio = false;
-
-
-    ngOnInit(): void {
-      this.projectForModal = this.data;
-    }
-
-    onNoClick(): void {
-      this.gotoFolio = true;
-      this.dialogRef.close(this.gotoFolio);
-    }
-
-}

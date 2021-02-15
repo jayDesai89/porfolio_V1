@@ -1,4 +1,4 @@
-<article class="container-fluid experience-project">
+<article class="experience-project">
 
   <!-- Banner start -->
   <section *ngIf="showTitle" class="page-title">
@@ -6,7 +6,7 @@
       <!-- Banner Text -->
       <div class="page-title-div">
         <h1 class="banner-text animate__animated animate__slideInLeft" color="white">
-          Portfolio projects
+          Projects
         </h1>
       </div>
     </div>
@@ -14,13 +14,13 @@
 
   <section class="project-card-section">
     <div class="flex text-center flex-justify-content-space-around flex-wrap">
-      <div *ngFor="let job of experience;let i = index" class=" project-card-section pad-10-all animate__animated animate__zoomIn">
+      <div *ngFor="let job of experience;let i = index" class="project-card-div animate__animated animate__zoomIn">
         <mat-card class="card-project flex flex-column flex-justify-content-space-around flex-wrap">
           <!-- On Hover Card Info - Start -->
           <div class="card-onHover flex flex-column flex-justify-content-space-around flex-wrap"
             style="align-items: center; padding: 15px;">
             <mat-card-title class="card__title">
-              <div>
+              <div class="company-logo">
                 <img src="../../../assets/images/exp_companies/{{job.companyLogo}}" alt="bell-logo"
                   [style.width]="job.companyLogoWidth">
               </div>
@@ -35,8 +35,8 @@
             </mat-card-content>
             <div class="w-100">
               <mat-card-action class="card__detail text-center w-100">
-                <button class="btn btn1 proj-detail-btn" mat-raised-button color="primary"
-                  (click)="openDialog(job)">
+                <button class="proj-detail-btn" mat-raised-button color="primary"
+                  (click)="showProjectDetail(job)">
                   Project detail
                 </button>
               </mat-card-action>
@@ -84,8 +84,8 @@
   </section>
 
   <div *ngIf="!showTitle">
-    <div  class="container btn-container">
-      <button class="btn btn1" routerLink="/projects">
+    <div  class="container all-proj-btn-container">
+      <button mat-raised-button color="primary" [routerLink]="'/projects'">
         <span class="txtSize20">View All Projects</span>
       </button>
     </div>

@@ -16,7 +16,7 @@ export class AppComponent implements AfterViewInit {
 
   // tslint:disable-next-line: use-lifecycle-interface
   ngAfterViewInit() {
-    this.navElement = document.getElementById('host-nav-bar') as HTMLElement;
+    this.navElement = document.getElementById('router-out') as HTMLElement;
     console.log(this.navElement);
   }
 
@@ -24,9 +24,9 @@ export class AppComponent implements AfterViewInit {
   onScroll() {
     if (window.pageYOffset > 1) {
       // APPLY CLASS TO THIS ELEMENT ON PAGE SCROLL
-      this.navElement.classList.add('nav-bar-active');
+    //  this.navElement.classList.add('router-top-margin');
     } else {
-      this.navElement.classList.remove('nav-bar-active');
+    //  this.navElement.classList.remove('router-top-margin');
     }
   }
 }

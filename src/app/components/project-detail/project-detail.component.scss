@@ -1,0 +1,27 @@
+.project-detail {
+  // padding: 2%;
+
+  .page-title-div {
+    padding: 5%;
+    color: white;
+    width: 100%;
+    h1 {
+      font-weight: normal;
+    }
+  }
+}
+
+
+// ######################################### Media query #########################################
+/* smartphones, iPhone, portrait 480x320 phones */
+@media screen and (min-width:320px)  {  };
+/* port and rait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+@media screen and (max-width:481px)  {  };
+/* port and rait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+@media screen and (max-width:641px)  {  };
+/* tabl and et, landscape iPad, lo-res laptops ands desktops */
+@media screen and (min-width:961px)  {  }
+/* big and landscape tablets, laptops, and desktops */
+@media screen and (min-width:1025px) {  }
+/* hi-r and es laptops and desktops */
+@media screen and (min-width:1281px) {  }

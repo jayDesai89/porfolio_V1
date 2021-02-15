@@ -11,7 +11,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
 // Components
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HeaderComponent } from './components/header/header.component';
-import { DialogOverviewExampleDialog, PortfolioProjectComponent } from './components/portfolio-project/portfolio-project.component';
+import { PortfolioProjectComponent } from './components/portfolio-project/portfolio-project.component';
 import { AppComponent } from './app.component';
 
 // Pipes
@@ -33,7 +33,8 @@ import { LearningProjectComponent } from './components/learning-project/learning
 import { FooterComponent } from './components/footer/footer.component';
 import { TestCodeComponent } from './components/test-code/test-code.component';
 import { OnHoverEffectDirective } from './directives/on-hover-effect.directive';
-import { HeaderDrawerComponent } from './components/header/header-drawer/header-drawer.component';
+import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
+import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 
 
 
@@ -45,11 +46,10 @@ import { HeaderDrawerComponent } from './components/header/header-drawer/header-
     PortfolioProjectComponent,
     ContactMeComponent,
     LearningProjectComponent,
-    DialogOverviewExampleDialog,
     FooterComponent,
     TestCodeComponent,
     OnHoverEffectDirective,
-    HeaderDrawerComponent
+    ProjectDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,11 +68,12 @@ import { HeaderDrawerComponent } from './components/header/header-drawer/header-
     ReactiveFormsModule,
     NgxSpinnerModule,
     MatDialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxPageScrollCoreModule
   ],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  entryComponents: [DialogOverviewExampleDialog]
+  entryComponents: []
 })
 export class AppModule { }

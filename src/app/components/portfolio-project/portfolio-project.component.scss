@@ -10,6 +10,10 @@
     }
   }
 
+  .project-card-div {
+    padding: 3%;
+  }
+
   mat-card,
   .card-project {
     flex: 1 0 300px;
@@ -61,23 +65,37 @@
         color: black;
         padding: 5px;
         margin: 5px;
+
       }
 
       &:hover {
         width: 100%;
         height: 100%;
-        transition: all 300ms ease-in-out;
         opacity: 1;
+        transition: all 300ms ease-in-out;
+
+        .company-logo {
+        animation: slideInRight; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 500ms; /* don't forget to set a duration! */
+        }
+        .tech-stack-pill {
+        animation: slideInLeft; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 500ms; /* don't forget to set a duration! */
+        }
+        button {
+          animation: backInUp;
+          animation-duration: 500ms;
+        }
+
       }
 
-      .btn.btn1.proj-detail-btn {
-        width: 60%;
-        background: black;
-        color:white;
+        .proj-detail-btn {
+          width: 60%;
+        transition: all 200ms ease-in-out;
 
         &:hover {
-          color: black;
-          border: 1px solid black;
+          transform: scale(1.2);
+          transition: all 200ms ease-in-out;
         }
       }
     }
@@ -97,17 +115,18 @@
 }
 
 
-.btn-container {
+.all-proj-btn-container {
   margin-bottom: 5%;
   button{
     width: 30%;
-    border: 3px solid !important;
+    padding: 1%;
     font-weight: bold;
   }
 }
 
 
 .container,
+.all-proj-btn-container,
 .card-project {
   text-align: center;
   margin-top: 2%;
@@ -190,11 +209,25 @@
     width: 100%;
   }
 
+  .project-card-div {
+    padding: 3% 1% !important;
+  }
+
+
   mat-card,
   .card-project {
     flex: 1 0 auto;
     max-width: 100%;
-    height: 100%x;
+    height: 100%;
+  }
+
+  .all-proj-btn-container {
+    width: 100% !important;
+    button {
+      width: 100% !important;
+      margin: 3% 0;
+      padding: 5%;
+    }
   }
  };
 /* port and rait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */

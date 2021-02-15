@@ -1,40 +1,56 @@
-<article class="container-fluid dashboard">
+<article class="dashboard" id="dashboard">
   <!-- Banner start -->
-  <section class="banner-section" style="">
-    <div class="flex flex-row flex-justify-content-space-between banner-div flex-wrap">
+  <section class="banner-section">
+    <div class="flex flex-column flex-justify-content-space-between banner-div flex-wrap">
       <!-- Banner Text -->
-      <h1 class="banner-text animate__animated animate__slideInLeft">
-        Hi, I am Jay <br>
-        Web Designer and a Front-end Developer <br>
-        based in Ontario, Canada
-      </h1>
-      <p class="txtSize30 mar-h-25">
-        Developing amazing user experience one pixel at a time
-      </p>
+      <div class="animate__animated animate__slideInLeft">
+        <h1 class="banner-text" style="display: block;">
+          Hi, I am Jay <br>
+          Web Designer and a Front-end Developer <br>
+          based in Ontario, Canada
+        </h1>
+
+        <p class="txtSize25 mar-h-25 banner-subtext" style="display: block;">
+          Developing amazing user experience one pixel at a time
+        </p>
+      </div>
+
+
+      <div class="call-action-btn-div flex flex-wrap">
+        <button mat-raised-button color="primary" class="git-hub-btn animate__animated animate__rotateIn">
+          <a href="https://github.com/jayDesai89" target="_blank">
+            <img class="" src="../../../assets/icons/github.svg" alt="github link">
+          </a>
+        </button>
+
+        <button mat-raised-button color="primary" (click)="scroll($event)" class="scroll-down-btn animate__animated animate__slideInLeft">
+            <span class="txtSize20">Let me see some work</span><img class="" src="../../../assets/icons/arrow-down.svg" alt="go to project">
+        </button>
+      </div>
     </div>
 
-    <!-- Mouse Scroll down div -->
-    <!-- style="margin:5% 0 3% 0;" -->
-    <div class="hero flex flex-justify-content-center">
+    <!-- <div class="hero flex flex-justify-content-center">
       <a href="#exp-section" class="scroll-down">
         <div class="mouse">
           <span></span>
         </div>
       </a>
-    </div>
+    </div> -->
     <!-- Banner end -->
   </section>
 
 
 
   <!-- Experience start -->
+  <div id="stop-scroll-here">
+  </div>
   <section id="exp-section" class="exp-section">
     <div class="row mar-30-bottom">
       <div class="col-12  text-center">
         <div class="exp-detail">
-          <p class="txtSize30" aria-label="Experience">
+          <h2 class="" aria-label="Experience">
             Featured Projects
-          </p>
+          </h2>
           <span class="txtSize16">
             Over 5 years of professional experience in web-based business application development,
             focusing on the presentation layer (UI/UX) as a UI/UX Front End Developer.
@@ -51,13 +67,13 @@
   <!-- Experience end -->
 
   <!-- Personal Projects -->
-  <section style="margin-bottom: 5%;">
+  <section id="learning-proj-section" class="learning-proj-section">
     <div class="row mar-30-bottom">
       <div class="col-12" style="text-align: center;">
         <div>
-          <p class="txtSize30" aria-label="Learning projects">
+          <h2 class="" aria-label="Learning projects">
             Personal projects
-          </p>
+          </h2>
           <span class="txtSize16">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
             Nam repudiandae in neque fugit explicabo quam ea, repellat<br>

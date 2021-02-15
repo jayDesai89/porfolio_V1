@@ -19,18 +19,36 @@ import {
     ]),
   ],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, AfterViewInit {
   showMobileToggle: boolean = false;
   innerWidth: any;
   showSideBar: boolean = false;
   name = 'Angular 5';
   animationState = 'in';
+  navElement: HTMLElement;
 
   constructor() {}
 
   ngOnInit() {
     // tslint:disable-next-line: deprecation
     this.onResize(event);
+  }
+
+  // tslint:disable-next-line: use-lifecycle-interface
+  ngAfterViewInit() {
+    this.navElement = document.getElementById('someNav') as HTMLElement;
+    // console.log(this.navElement);
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll() {
+    // console.log(window.pageYOffset);
+    if (window.pageYOffset > 1) {
+      // APPLY CLASS TO THIS ELEMENT ON PAGE SCROLL
+      this.navElement.classList.add('nav-bar-active');
+    } else {
+      this.navElement.classList.remove('nav-bar-active');
+    }
   }
 
   @HostListener('window:resize', ['$event'])

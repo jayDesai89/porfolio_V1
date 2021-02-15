@@ -1,37 +1,26 @@
-// .view-container {
-//   margin-top: 0px;
-// }
-// .mat-sidenav-content {
-//   background-color: black;
-// }
-// mat-drawer-content mat-sidenav-content {
-//   margin: 0px;
-// }
-
-.nav-bar {
-  /* position: static; */
-  /* width: 100%; */
-  padding: 5px 0px;
-  font-size: 20px;
-  transition: all 0.7ms ease-in;
+.main-container {
+  position: relative;
 }
 
-.nav-bar-active {
-  position: fixed;
-  padding: 0px 0px;
-  font-size: 16px;
-  max-width: 100%;
-  max-height: max-content;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 20;
-  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 30);
-  transition: all 0.7ms ease-in;
-
-  .app-heading {
-    font-size: 25px;
-  }
+#router-out {
+  margin-top: 5rem;
 }
 
+// ######################################### Media query #########################################
+/* smartphones, iPhone, portrait 480x320 phones */
+@media screen and (max-width:320px) { };
+
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+@media screen and (max-width:481px) { }
+
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+@media screen and (max-width:641px) {}
+
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media screen and (max-width:961px) { }
+
+/* big landscape tablets, laptops, and desktops */
+@media screen and  (max-width:1025px) {}
+
+/* hi-res laptops and desktops */
+@media screen and  (max-width:1281px) {}

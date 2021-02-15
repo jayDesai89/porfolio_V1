@@ -1,10 +1,10 @@
-  <section class="app-header">
+  <section class="app-header" id="someNav">
 
     <!-- Web top navigation -->
-    <div *ngIf="!showMobileToggle" class="web-header app-header-div container-fluid animate__animated animate__backInDown" id="navbar">
+    <div *ngIf="!showMobileToggle" class="web-header container-fluid animate__animated animate__backInDown" id="navbar">
       <div class="app-header-left-div">
         <div class="gradient-border">
-          <p class="app-heading" routerLink="/dashboard">
+          <p class="app-heading-title" routerLink="/dashboard">
             JD
           </p>
         </div>
@@ -34,35 +34,39 @@
     </div>
 
     <!-- mobile top navigation -->
-    <div *ngIf="showMobileToggle" class="phone-header animate__animated animate__fadeInLeft" id="navbar">
+    <div *ngIf="showMobileToggle" class="phone-header container-fluid animate__animated animate__backInDown"
+      id="navbar">
       <!--1st Row flex box -->
-      <div class="app-header-div-mobile flex">
+      <div class="app-mobile-header">
         <div class="gradient-border">
-          <p class="app-heading" routerLink="/dashboard">
+          <p class="app-heading-title-mobile" routerLink="/dashboard">
             JD
           </p>
         </div>
         <div class="app-header-toggle-button-div-mobile">
           <button mat-raised-button (click)="showSideBar = !showSideBar">
-            <img  *ngIf="showSideBar" src="../../../assets/icons/x(2).svg" alt="icon close">
-            <img *ngIf="!showSideBar"  src="../../../assets/icons/menu.svg" alt="icon menu">
+            <img *ngIf="showSideBar" class="animate__animated animate__rotateIn 100ms" src="../../../assets/icons/x(2).svg" alt="icon close">
+            <img *ngIf="!showSideBar" class="animate__animated animate__rotateIn 100ms" src="../../../assets/icons/menu.svg" alt="icon menu">
           </button>
         </div>
       </div>
       <!--2nd Row flex box -->
-      <div *ngIf="showSideBar" class="app-mobile-nav" [@slideDownUp]>
+      <div *ngIf="showSideBar" class="app-mobile-nav-drop-down" [@slideDownUp]>
         <div class="link-div">
           <nav class="navbar navbar-expand-lg" role="navigation">
             <div class="" id="navbarSupportedContent">
               <ul class="navbar-nav flex-justify-content-center flex-align-center">
                 <li routerLinkActive="nav-link-active-li" class="nav-item">
-                  <a routerLinkActive="nav-link-active" routerLink="/dashboard" class="nav-link" (click)="showSideBar = !showSideBar">Home</a>
+                  <a routerLinkActive="nav-link-active" routerLink="/dashboard" class="nav-link"
+                    (click)="showSideBar = !showSideBar">Home</a>
                 </li>
                 <li routerLinkActive="nav-link-active-li" class="nav-item">
-                  <a routerLinkActive="nav-link-active" routerLink="/projects" class="nav-link" (click)="showSideBar = !showSideBar">Projects</a>
+                  <a routerLinkActive="nav-link-active" routerLink="/projects" class="nav-link"
+                    (click)="showSideBar = !showSideBar">Projects</a>
                 </li>
                 <li routerLinkActive="nav-link-active-li" class="nav-item">
-                  <a routerLinkActive="nav-link-active" routerLink="/contactme" class="nav-link" (click)="showSideBar = !showSideBar">Contact</a>
+                  <a routerLinkActive="nav-link-active" routerLink="/contactme" class="nav-link"
+                    (click)="showSideBar = !showSideBar">Contact</a>
                 </li>
               </ul>
             </div>

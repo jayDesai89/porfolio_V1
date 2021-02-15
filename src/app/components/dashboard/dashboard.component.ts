@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, HostListener, Inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, HostListener, Inject, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations'
 
 
@@ -21,14 +21,18 @@ export class DashboardComponent implements OnInit {
   show_learning_comp: boolean = false;
 
 
-  constructor( ) { }
+  constructor(private myElement: ElementRef) { }
 
   ngOnInit(): void { }
 
+  scroll(event) {
+    console.log('happning')
+    this.myElement.nativeElement.ownerDocument.getElementById('stop-scroll-here').scrollIntoView({behavior: 'smooth'});
+  }
 
   @HostListener('document:scroll')
   scrollPage() {
-    console.log(document.body.scrollTop);
+    // console.log(document.body.scrollTop);
     // tslint:disable-next-line: max-line-length
     (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) ? this.show_project_comp=true : this.show_project_comp = false;
     // tslint:disable-next-line: max-line-length
