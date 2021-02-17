@@ -11,35 +11,34 @@
         </h1>
 
         <p class="txtSize25 mar-h-25 banner-subtext" style="display: block;">
-          Developing amazing user experience one pixel at a time
+          looking for fulltime opportunities
         </p>
       </div>
 
 
       <div class="call-action-btn-div flex flex-wrap">
-        <button mat-raised-button color="primary" class="git-hub-btn animate__animated animate__rotateIn">
-          <a href="https://github.com/jayDesai89" target="_blank">
-            <img class="" src="../../../assets/icons/github.svg" alt="github link">
+        <button mat-raised-button matTooltip="Go to Linked-in" matTooltipClass="custom-tooltip"
+          aria-label="go to linkedin " color="primary" class="git-hub-btn animate__animated animate__rotateIn">
+          <a href="https://www.linkedin.com/in/jay-desai-82626070" target="_blank">
+            <img class="git-hub" src="../../../assets/icons/linkedin.svg" alt="linkedin logo">
           </a>
         </button>
 
-        <button mat-raised-button color="primary" (click)="scroll($event)" class="scroll-down-btn animate__animated animate__slideInLeft">
-            <span class="txtSize20">Let me see some work</span><img class="" src="../../../assets/icons/arrow-down.svg" alt="go to project">
+        <button mat-raised-button matTooltip="Go to Github" matTooltipClass="custom-tooltip" aria-label="go to git-hub"
+          color="primary" class="git-hub-btn animate__animated animate__rotateIn">
+          <a href="https://github.com/jayDesai89" target="_blank">
+            <img class="git-hub" src="../../../assets/icons/github.svg" alt="github logo">
+          </a>
+        </button>
+
+        <button mat-raised-button color="primary" (click)="scroll($event)"
+          class="scroll-down-btn animate__animated animate__slideInLeft">
+          <span class="txtSize20 arrow-down-text">Let me see some work</span>
+          <img class="arrow-down" src="../../../assets/icons/arrow-down.svg" alt="go to project">
         </button>
       </div>
     </div>
-
-    <!-- <div class="hero flex flex-justify-content-center">
-      <a href="#exp-section" class="scroll-down">
-        <div class="mouse">
-          <span></span>
-        </div>
-      </a>
-    </div> -->
-    <!-- Banner end -->
   </section>
-
-
 
   <!-- Experience start -->
   <div id="stop-scroll-here">
@@ -87,6 +86,80 @@
 
   </section>
   <!-- Personal Projects -->
+
+  <section class="contact-me-section ">
+
+    <div class="row mar-30-bottom">
+      <div class="col-12" style="text-align: center;">
+        <div>
+          <h2 class="" aria-label="Contact me">
+            Contact me
+          </h2>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="contact-me flex flex-column flex-justify-content-center">
+      <div class="row">
+        <div class="col-12 text-center w-100">
+          <div class="contact-me-form">
+            <form action="" [formGroup]="contactmeForm" (ngSubmit)="getContactmeForm(contactmeForm.value)"
+              appearance="fill">
+              <!-- Enter name of the city here -->
+              <mat-form-field class="w-100">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name" aria-label="name" type="text" aria-required="true"
+                  appearance="fill">
+              </mat-form-field>
+
+              <!-- Enter name of the city here -->
+              <mat-form-field class="w-100">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" aria-label="email"
+                type="email" [errorStateMatcher]="matcher"
+                placeholder="Ex. pat@example.com"
+                appearance="fill">
+                <mat-error *ngIf="personEmail?.hasError('email') && !personEmail?.hasError('required')">
+                  Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="personEmail?.hasError('required')">
+                  Email is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+
+              <!-- Enter name of the city here -->
+              <mat-form-field class="w-100">
+                <mat-label>Phone</mat-label>
+                <input matInput formControlName="phone" aria-label="phone" type="phone" aria-required="true"
+                  appearance="fill">
+              </mat-form-field>
+
+              <!-- Enter name of the city here -->
+              <mat-form-field class="w-100">
+                <mat-label>Detail</mat-label>
+                <input matInput formControlName="detail" aria-label="detail" type="text" aria-required="true"
+                  appearance="fill">
+              </mat-form-field>
+
+              <div>
+                <button mat-raised-button type="submit" color="primary" [disabled]="!contactmeForm.valid"
+                  class="lets-talk-btn animate__animated animate__slideInLeft">
+                  <span class="txtSize20">Lets talk</span>
+                  <img class="send-icon" src="../../../assets/icons/send.svg" alt="contact jay">
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <div style="height: 50px;width: 100%;"></div>
 </article>
 <!--
 <section>

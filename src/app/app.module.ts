@@ -27,6 +27,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
 import { LearningProjectComponent } from './components/learning-project/learning-project.component';
@@ -69,7 +70,8 @@ import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
     NgxSpinnerModule,
     MatDialogModule,
     BrowserAnimationsModule,
-    NgxPageScrollCoreModule
+    NgxPageScrollCoreModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent],

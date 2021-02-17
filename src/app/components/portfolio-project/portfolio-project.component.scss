@@ -1,8 +1,9 @@
 .experience-project {
   // padding: 2%;
+  background: #212121;
 
   .page-title-div {
-    padding: 5%;
+    padding: 4% 5% 2% 5%;
     color: white;
     width: 100%;
     h1 {
@@ -52,6 +53,8 @@
     }
 
     .card-onHover {
+      align-items: center;
+      padding: 15px;
       width: 100%;
       height: 100%;
       position: absolute;
@@ -83,7 +86,7 @@
         animation-duration: 500ms; /* don't forget to set a duration! */
         }
         button {
-          animation: backInUp;
+          animation: zoomIn;
           animation-duration: 500ms;
         }
 
@@ -116,89 +119,15 @@
 
 
 .all-proj-btn-container {
-  margin-bottom: 5%;
+  margin-top: 3%;
+  width: 100%;
+  text-align: center;
   button{
     width: 30%;
     padding: 1%;
     font-weight: bold;
   }
 }
-
-
-.container,
-.all-proj-btn-container,
-.card-project {
-  text-align: center;
-  margin-top: 2%;
-  .btn {
-    border: 1px solid #3498db;
-    background: none;
-    padding: 10px 20px;
-    font-size: 20px;
-    cursor: pointer;
-    margin: 10px;
-    transition: 0.8s;
-    position: relative;
-    overflow: hidden;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      width: 100%;
-      height: 0%;
-      background: #3498db;
-      z-index: -1;
-      transition: 0.8s;
-    }
-  }
-
-  .btn1,
-  .btn2 {
-    color: #3498db;
-
-    &:hover {
-      color: #fff;
-    }
-  }
-
-  .btn3,
-  .btn4 {
-    color: white;
-
-    &:hover {
-      color: #3498db;
-    }
-  }
-
-  .btn1::before,
-  .btn3::before {
-    top: 0;
-    border-radius: 0 0 50% 50%;
-  }
-
-  .btn2::before,
-  .btn4::before {
-    bottom: 0;
-    border-radius: 50% 50% 0 0;
-  }
-
-  .btn3::before,
-  .btn4::before {
-    height: 180%;
-  }
-
-  .btn1:hover::before,
-  .btn2:hover::before {
-    height: 180%;
-  }
-
-  .btn3:hover::before,
-  .btn4:hover::before {
-    height: 0%;
-  }
-}
-
 
 // ######################################### Media query #########################################
 /* smartphones, iPhone, portrait 480x320 phones */
@@ -217,12 +146,14 @@
   mat-card,
   .card-project {
     flex: 1 0 auto;
-    max-width: 100%;
-    height: 100%;
+    max-width: 100% !important;
+    height: 100% !important;
   }
 
   .all-proj-btn-container {
     width: 100% !important;
+    text-align: center;
+    margin-top: 3%;
     button {
       width: 100% !important;
       margin: 3% 0;
@@ -238,6 +169,18 @@
 
   .btn {
     margin: auto;
+  }
+
+
+  .all-proj-btn-container {
+    width: 100% !important;
+    text-align: center;
+    margin-top: 3%;
+    button {
+      width: 80% !important;
+      margin: 3% 0;
+      padding: 2%;
+    }
   }
  };
 /* tabl and et, landscape iPad, lo-res laptops ands desktops */

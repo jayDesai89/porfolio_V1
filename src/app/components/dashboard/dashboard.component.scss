@@ -1,12 +1,10 @@
 @import '../../../variables.scss';
 
 .dashboard {
-  background-color: $black;
+  background-color: #212121;
   color: white;
-  // height: 65vh;
 
   .banner-section {
-    // height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -30,6 +28,7 @@
           height: 50%;
           margin-left: 1%;
           padding: 1%;
+
         }
 
         .git-hub-btn {
@@ -42,98 +41,19 @@
         }
 
         .scroll-down-btn {
-          // margin-left: 4%;
+
+          .arrow-down {
+            margin-left: 12px;
+          }
         }
       }
-
-
     }
-
-
-
   }
 
   #stop-scroll-here {
     margin-bottom: 5%;
     height: 90px;
   }
-
-  // .hero {
-  //   width: 100%;
-
-  //   .scroll-down {
-  //     display: flex;
-  //     flex-direction: column;
-  //     align-items: center;
-  //   }
-
-  //   .mouse {
-  //     width: 2.5rem;
-  //     height: 5rem;
-  //     border: 2px solid white;
-  //     border-radius: 2rem;
-  //     margin-bottom: .5rem;
-  //     display: flex;
-
-  //     span {
-  //       width: 1rem;
-  //       height: 1rem;
-  //       background-color: white;
-  //       display: block;
-  //       border-radius: 50%;
-  //       margin: auto;
-  //       animation: move-wheel 1s linear infinite;
-  //     }
-  //   }
-
-  //   .arrow {
-  //     span {
-  //       display: block;
-  //       width: 1rem;
-  //       height: 1rem;
-  //       border: 2px solid transparent;
-  //       border-right-color: white;
-  //       border-bottom-color: white;
-  //       transform: rotate(45deg);
-  //       animation: arrow-down 0.5s alternate infinite;
-  //     }
-  //   }
-
-  //   @keyframes move-wheel {
-  //     0% {
-  //       opacity: 0;
-  //       transform: translateY(-1rem);
-  //     }
-
-  //     100% {
-  //       opacity: 1;
-  //       transform: translateY(1rem);
-  //     }
-  //   }
-
-
-  //   @keyframes arrow-down {
-  //     0% {
-  //       opacity: 0;
-  //     }
-
-  //     25% {
-  //       opacity: 0.25;
-  //     }
-
-  //     50% {
-  //       opacity: 0.50;
-  //     }
-
-  //     75% {
-  //       opacity: 0.75;
-  //     }
-
-  //     100% {
-  //       opacity: 1;
-  //     }
-  //   }
-  // }
 
   .exp-section {
     margin-top: 3%;
@@ -151,37 +71,42 @@
     margin-bottom: 5%;
   }
 
+  .contact-me-section {
+    margin: 3% 5%;
+    .contact-me {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+      .contact-me-form{
+        background: white;
+        padding: 4%;
+        color: black;
+        border-radius: 15px;
+
+        mat-form-field {
+          margin-bottom: 2%;
+        }
+
+        .lets-talk-btn {
+          padding: 2%;
+          .send-icon {
+            margin-left: 12px;
+          }
+        }
+      }
+    }
+  }
+
+
 
 }
-
-/* smartphones, iPhone, portrait 480x320 phones */
-@media screen and (max-width:480px) {}
-
-
-
-/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-// @media (max-width:641px) {
-//   .dashboard-section {
-//     height: 100%;
-//   }
-
-//   .banner-text-div {
-//     width: 100%;
-//     padding: 1%;
-//     margin-bottom: 3%;
-//   }
-
-//   .banner-text {
-//     font-size: 2em !important;
-//   }
-// }
-
 
 // ######################################### Media query #########################################
 /* smartphones, iPhone, portrait 480x320 phones */
 @media screen and (min-width:320px) {}
-
-;
 
 /* port and rait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 @media screen and (max-width:481px) {
@@ -191,8 +116,16 @@
 
   .scroll-down-btn {
     width: 100% !important;
-  }
 
+    .arrow-down-text {
+      padding: 5px;
+      white-space: initial;
+    }
+
+    .arrow-down {
+      margin: 0px;
+    }
+  }
 }
 
 ;
@@ -219,8 +152,6 @@
   }
 }
 
-;
-
 /* tabl and et, landscape iPad, lo-res laptops ands desktops */
 @media screen and (min-width:961px) {}
 
@@ -229,3 +160,9 @@
 
 /* hi-r and es laptops and desktops */
 @media screen and (min-width:1281px) {}
+
+custom-tooltip {
+  /* your own custom styles here */
+  /* e.g. */
+  color: red !important;
+}

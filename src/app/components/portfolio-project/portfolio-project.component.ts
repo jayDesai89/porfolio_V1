@@ -30,6 +30,7 @@ export class PortfolioProjectComponent implements OnInit, AfterViewInit {
       // tslint:disable-next-line: max-line-length
       description: 'Bell is Canada’s largest telecommunications company which provides Mobile phone, TV, high speed and wireless internet, and residential home phones services',
       companyLogo: 'bell_logo.png',
+      imgAltText:  'Bell logo',
       companyLogoWidth: '35%'
     },
      {
@@ -40,6 +41,7 @@ export class PortfolioProjectComponent implements OnInit, AfterViewInit {
       // tslint:disable-next-line: max-line-length
       description: 'Brookfield Global Integrated Solutions is one of the largest providers of property management and project delivery services',
       companyLogo: 'bgis.png',
+      imgAltText:  'BGIS logo',
       companyLogoWidth: '100%'
     },
      {
@@ -51,6 +53,7 @@ export class PortfolioProjectComponent implements OnInit, AfterViewInit {
       description: 'Issuer Direct Corporation is a public listed USA based company, it provides services such as communications and compliance based on the needs of corporate issuers.',
       'tech-stack': ['HTML5', 'CSS3', 'Bootstrap4', 'JavaScript', 'jQuery', 'Angular 6+'],
       companyLogo: 'isdr.png',
+      imgAltText:  'Issuer direct logo',
       companyLogoWidth: '100%'
     }
   ];

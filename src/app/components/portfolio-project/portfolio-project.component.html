@@ -17,11 +17,10 @@
       <div *ngFor="let job of experience;let i = index" class="project-card-div animate__animated animate__zoomIn">
         <mat-card class="card-project flex flex-column flex-justify-content-space-around flex-wrap">
           <!-- On Hover Card Info - Start -->
-          <div class="card-onHover flex flex-column flex-justify-content-space-around flex-wrap"
-            style="align-items: center; padding: 15px;">
+          <div class="card-onHover flex flex-column flex-justify-content-space-around flex-wrap">
             <mat-card-title class="card__title">
               <div class="company-logo">
-                <img src="../../../assets/images/exp_companies/{{job.companyLogo}}" alt="bell-logo"
+                <img src="../../../assets/images/exp_companies/{{job.companyLogo}}" [alt]="job.imgAltText"
                   [style.width]="job.companyLogoWidth">
               </div>
             </mat-card-title>

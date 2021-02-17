@@ -2,7 +2,8 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300");
 
 .app-header {
-  position: fixed;
+   position: fixed;
+   width: 100%;
   display: flex;
   color: $white;
   padding: 10px 0px;
@@ -36,6 +37,7 @@
         font-size: 40px;
         margin: 0px;
         font-weight: 400;
+        transform: all 500ms ease-in-out;
         a {
           color: white;
         }
@@ -66,16 +68,18 @@
           color: white;
           cursor: pointer;
           font-weight: normal;
-          transition: all 100ms ease-in-out;
+          transition: all 300ms ease-in-out;
         }
 
         .nav-link-active-li {
           background-color: white;
           border-radius: 20px;
-          transition: all 100ms ease-in-out;
+          transition: all 300ms ease-in-out;
 
           .nav-link-active {
             color: black;
+            font-weight: bold;
+            transition: all 300ms ease-in-out;
           }
         }
 
@@ -162,6 +166,8 @@
   transition: all 0.5s ease-in-out;
   // transition: all 300ms ease-in-out;
   border-bottom: 3px solid #3498db;
+
+
 }
 
 .app-header.nav-bar-active {
