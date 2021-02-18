@@ -29,7 +29,7 @@ export class LearningProjectComponent implements OnInit {
   constructor(public _router: Router) { }
 
   ngOnInit() {
-    this._router.url === "/projects" ? this.showAllProj = true : this.showAllProj = false;
+    this._router.url === '/projects' ? this.showAllProj = true : this.showAllProj = false;
   }
 
 }

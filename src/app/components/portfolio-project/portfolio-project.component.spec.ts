@@ -1,4 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule, MatButtonToggleModule, MatDialogModule, MatDividerModule, MatFormFieldModule, MatInputModule, MatTabsModule } from '@angular/material';
+import {MatCardModule} from '@angular/material/card';
+import { RouterModule } from '@angular/router';
+import { RouterTestingModule } from '@angular/router/testing';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { LearningProjectComponent } from '../learning-project/learning-project.component';
 
 import { PortfolioProjectComponent } from './portfolio-project.component';
 
@@ -8,7 +15,20 @@ describe('PortfolioProjectComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PortfolioProjectComponent ]
+      imports: [MatDividerModule,
+        MatButtonModule,
+        MatInputModule,
+        MatTabsModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatButtonToggleModule,
+        FormsModule,
+        ReactiveFormsModule,
+        NgxSpinnerModule,
+        MatDialogModule,
+        RouterModule,
+        RouterTestingModule.withRoutes([])],
+      declarations: [ PortfolioProjectComponent, LearningProjectComponent ]
     })
     .compileComponents();
   }));

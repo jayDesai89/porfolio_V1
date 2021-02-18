@@ -29,10 +29,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatDialogModule} from '@angular/material/dialog';
-import { ContactMeComponent } from './components/contact-me/contact-me.component';
 import { LearningProjectComponent } from './components/learning-project/learning-project.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { TestCodeComponent } from './components/test-code/test-code.component';
 import { OnHoverEffectDirective } from './directives/on-hover-effect.directive';
 import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
@@ -45,10 +42,7 @@ import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
     DashboardComponent,
     HeaderComponent,
     PortfolioProjectComponent,
-    ContactMeComponent,
     LearningProjectComponent,
-    FooterComponent,
-    TestCodeComponent,
     OnHoverEffectDirective,
     ProjectDetailComponent,
   ],
