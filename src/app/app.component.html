@@ -5,4 +5,13 @@
   <section id="router-out">
     <router-outlet></router-outlet>
   </section>
+
+  <section>
+    <div class="scroll-to-top text-right">
+      <button mat-raised-button matTooltip="Go to Top" matTooltipClass="custom-tooltip" aria-label="go to Top"
+        color="primary" class="goTop-btn" (click)="scrollToTop()">
+        <img class="arrow-up" src="../../../assets/icons/arrow-up.svg" alt="go to top">
+      </button>
+    </div>
+  </section>
 </div>

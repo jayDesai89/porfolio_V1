@@ -5,53 +5,87 @@
     <div class="flex flex-row flex-justify-content-space-between banner-div flex-wrap">
       <!-- Banner Text -->
       <div class="page-title-div">
+
         <h1 class="banner-text animate__animated animate__slideInLeft" color="white">
-          Project detail
+          <a class="bread-crum-route display-none-tablet-sm" [routerLink]="['/projects']">Projects</a>
+          <span class="display-none-tablet-sm"> / </span>Project detail
         </h1>
       </div>
     </div>
   </section>
 
   <section class="project-detail-section">
-    <div>
-      <h2 class="comapnyName-title">
-        {{selectedProj?.companyName}}
-      </h2>
-      <p class="projectsubtitle">
-        {{selectedProj?.companyName}}
-      </p>
-      <p>
-        Project duration : June 2020 – Active project
-      </p>
-    </div>
-    <div class="project-name">
-      eChat, Usage enahancement etc
+    <!--1st Block-->
+    <div class="flex flex-justify-content-space-between flex-wrap-tablet-sm">
+      <!-- Left side div -->
+      <div class="comp-detail-left w-100 text-center">
+        <div class="">
+          <h2 class="comapnyName-title">
+            {{selectedProj?.companyName}}
+          </h2>
+        </div>
+        <p class="no-margin">
+          June 2020 – Active project
+        </p>
+        <div class="project-name">
+          <strong>
+            Projects:
+          </strong>
+          <ul>
+            <li>
+              User Enhancement
+            </li>
+            <li>
+              Unlimited Share
+            </li>
+            <li>
+              eChat
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="rotate-space">
+
+      </div>
+      <!-- Right side div -->
+      <div class="tech-stack-right w-100 text-center">
+        <h3>
+          Tech Stack
+        </h3>
+        <span class="tech-text" *ngFor="let tech of selectedProj?.techStack">
+          {{tech}}
+        </span>
+      </div>
     </div>
 
     <div>
 
     </div>
-    <section>
-      <h3>
-        Responsibilities
-      </h3>
-      <div>
+  </section>
+
+  <section class="project-responsibility-section">
+    <h4>
+      Responsibilities
+    </h4>
+    <div class="first-box-img-left flex flex-justify-content-space-between">
+      <div class="first-box-respon-text">
         <ul>
-          <li>
-            Collaborating with the team responsible for upgrading existing Bell applications, web sites, and web pages with accessibility features.
-          </li>
-          <li>
-            Leading a team of developers for developing mark-ups provided by design teams. As well well responsible for proving estimates of time and resources, maintaining timelines of project delivery
-          </li>
-          <li>
-            Communicating and collaborating with different teams such as Business, Designs, Development, Implementation, and Testing
-          </li>
-          <li>
-            Working as a solution architecture, code reviews, and guiding developers for writing clean, maintainable code
+          <li *ngFor="let detail of selectedProj?.projectDetail">
+            {{detail}}
           </li>
         </ul>
-      </div>
 
-    </section>
+      </div>
+      <div class="first-box-respon-img">
+
+      </div>
+    </div>
+    <div class="second-box-img-right">
+
+    </div>
+    <div class="third-box-img-left">
+
+    </div>
+
   </section>
 </article>

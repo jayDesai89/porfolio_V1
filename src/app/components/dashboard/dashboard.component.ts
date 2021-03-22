@@ -61,6 +61,10 @@ export class DashboardComponent implements OnInit {
     this.myElement.nativeElement.ownerDocument.getElementById('stop-scroll-here').scrollIntoView({behavior: 'smooth'});
   }
 
+  scrollContactMe(event) {
+    this.myElement.nativeElement.ownerDocument.getElementById('contact-me-stop-scroll-here').scrollIntoView({behavior: 'smooth'});
+  }
+
   @HostListener('document:scroll')
   scrollPage() {
     // console.log(document.body.scrollTop);

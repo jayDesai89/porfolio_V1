@@ -13,7 +13,7 @@ body {
   margin: 0;
   scroll-behavior: smooth;
   font-family: FontAvenirRegular;
-  background: black;
+  background: black !important;
 }
 
 .container {
@@ -125,6 +125,14 @@ body {
 
 .white-space-normal{
   white-space:normal
+}
+
+display-block {
+  display: block;
+}
+
+display-inline-block{
+  display: inline-block;
 }
 
 
@@ -301,13 +309,31 @@ flex-no-wrap {
 
 // ######################################### Media query #########################################
 /* smartphones, iPhone, portrait 480x320 phones */
-@media (min-width:320px)  {  };
+@media screen and (min-width:320px)  {
+  .display-none-mob{
+    display: none;
+  }
+ };
 /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-@media (min-width:481px)  {  };
+@media screen and (max-width:481px)  {
+  .display-none-tablet-sm{
+    display: none;
+  }
+
+  .flex-wrap-tablet-sm {
+    flex-wrap: wrap
+  }
+ };
 /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-@media (min-width:641px)  {  };
+@media screen and (min-width:641px)  {
+  .display-none-tablet{
+    display: none;
+  }
+ };
 /* tablet, landscape iPad, lo-res laptops ands desktops */
-@media (min-width:961px)  {  }
+@media screen and (min-width:961px)  {
+
+ }
 /* big landscape tablets, laptops, and desktops */
 @media (min-width:1025px) {  }
 /* hi-res laptops and desktops */

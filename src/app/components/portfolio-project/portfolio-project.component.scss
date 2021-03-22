@@ -1,11 +1,11 @@
 .experience-project {
-  // padding: 2%;
   background: #212121;
 
   .page-title-div {
     padding: 4% 5% 2% 5%;
     color: white;
     width: 100%;
+
     h1 {
       font-weight: normal;
     }
@@ -33,10 +33,13 @@
       right: 0;
       width: 100%;
       height: 0%;
-       background-image: linear-gradient(to bottom, #fa709a 0%, #fee140 100%);
-      background: #11998e;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to bottom, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to bottom, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background-image: linear-gradient(to bottom, #fa709a 0%, #fee140 100%);
+      background: #11998e;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to bottom, #38ef7d, #11998e);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to bottom, #38ef7d, #11998e);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       transition: all 400ms ease-in-out;
       opacity: 1;
     }
@@ -50,6 +53,11 @@
         font-size: bolder;
         font-size: 1.4em;
       }
+
+      .action-mobile {
+        display: none;
+      }
+
     }
 
     .card-onHover {
@@ -63,12 +71,12 @@
       z-index: 1;
       opacity: 0;
       border-radius: 10px;
+
       .tech-stack-pill {
         border-bottom: 2px solid black;
         color: black;
         padding: 5px;
         margin: 5px;
-
       }
 
       &:hover {
@@ -78,13 +86,19 @@
         transition: all 300ms ease-in-out;
 
         .company-logo {
-        animation: slideInRight; /* referring directly to the animation's @keyframe declaration */
-        animation-duration: 500ms; /* don't forget to set a duration! */
+          animation: slideInRight;
+          /* referring directly to the animation's @keyframe declaration */
+          animation-duration: 500ms;
+          /* don't forget to set a duration! */
         }
+
         .tech-stack-pill {
-        animation: slideInLeft; /* referring directly to the animation's @keyframe declaration */
-        animation-duration: 500ms; /* don't forget to set a duration! */
+          animation: slideInLeft;
+          /* referring directly to the animation's @keyframe declaration */
+          animation-duration: 500ms;
+          /* don't forget to set a duration! */
         }
+
         button {
           animation: zoomIn;
           animation-duration: 500ms;
@@ -92,8 +106,8 @@
 
       }
 
-        .proj-detail-btn {
-          width: 60%;
+      .proj-detail-btn {
+        width: 60%;
         transition: all 200ms ease-in-out;
 
         &:hover {
@@ -101,6 +115,10 @@
           transition: all 200ms ease-in-out;
         }
       }
+    }
+
+    mat-card-actions {
+      margin: 0px;
     }
 
 
@@ -122,7 +140,8 @@
   margin-top: 3%;
   width: 100%;
   text-align: center;
-  button{
+
+  button {
     width: 30%;
     padding: 1%;
     font-weight: bold;
@@ -131,9 +150,12 @@
 
 // ######################################### Media query #########################################
 /* smartphones, iPhone, portrait 480x320 phones */
-@media screen and (min-width:320px)  {  };
+@media screen and (min-width:320px) {}
+
+;
+
 /* port and rait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-@media screen and (max-width:481px)  {
+@media screen and (max-width:481px) {
   .exp-detail {
     width: 100%;
   }
@@ -148,21 +170,37 @@
     flex: 1 0 auto;
     max-width: 100% !important;
     height: 100% !important;
+
+    &::before {
+      display: none;
+    }
+
+    .card-onHover {
+      display: none;
+    }
   }
 
   .all-proj-btn-container {
     width: 100% !important;
     text-align: center;
     margin-top: 3%;
+
     button {
       width: 100% !important;
       margin: 3% 0;
       padding: 5%;
     }
   }
- };
+
+  .action-mobile {
+    display: block !important;
+  }
+}
+
+;
+
 /* port and rait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-@media screen and (max-width:641px)  {
+@media screen and (max-width:641px) {
   .proj-detail-btn-hover {
     width: auto;
   }
@@ -176,16 +214,22 @@
     width: 100% !important;
     text-align: center;
     margin-top: 3%;
+
     button {
       width: 80% !important;
       margin: 3% 0;
       padding: 2%;
     }
   }
- };
+}
+
+;
+
 /* tabl and et, landscape iPad, lo-res laptops ands desktops */
-@media screen and (min-width:961px)  {  }
+@media screen and (min-width:961px) {}
+
 /* big and landscape tablets, laptops, and desktops */
-@media screen and (min-width:1025px) {  }
+@media screen and (min-width:1025px) {}
+
 /* hi-r and es laptops and desktops */
-@media screen and (min-width:1281px) {  }
+@media screen and (min-width:1281px) {}

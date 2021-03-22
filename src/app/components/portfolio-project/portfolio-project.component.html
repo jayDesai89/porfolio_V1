@@ -27,9 +27,12 @@
 
             <mat-card-content class="card__snippet txtSize16">
               <div class="flex flex-row flex-justify-content-center flex-wrap">
-                <div class="tech-stack-pill" *ngFor="let tech of job.techStack">
-                  {{tech}}
+                <div *ngFor="let tech of job?.techStack,let i = index">
+                  <div class="tech-stack-pill" *ngIf="i < 5">
+                   <span>{{tech}}</span>
+                  </div>
                 </div>
+                <!-- <span *ngIf="job?.techStack.length > 5"></span> -->
               </div>
             </mat-card-content>
             <div class="w-100">
@@ -50,7 +53,6 @@
                 <p class="card-title text-black">
                   {{job.companyName}}
                 </p>
-
               </mat-card-title>
               <mat-card-subtitle class="text-left txtSize18">
                 <p class="card-subtitle txtSize20 text-black">
@@ -65,11 +67,12 @@
                 </p>
               </mat-card-content>
             </div>
-            <div>
-              <mat-card-actions class="card__detail text-center">
-                <!-- <button mat-raised-button color="primary" (click)="openDialog(job)">
+            <div class="w-100 action-mobile">
+              <mat-card-actions class="text-center w-100">
+                <button class="" mat-raised-button color="primary"
+                  (click)="showProjectDetail(job)">
                   Project detail
-                </button> -->
+                </button>
               </mat-card-actions>
             </div>
           </div>

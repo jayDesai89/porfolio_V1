@@ -1,11 +1,11 @@
 .learning-project {
-  // padding: 2%;
   background: #212121;
 
   .page-title-div {
-    padding: 1% 5%4% 5% 2% 5%;
+    padding: 4% 5% 2% 5%;
     color: white;
     width: 100%;
+
     h1 {
       font-weight: normal;
     }
@@ -33,10 +33,13 @@
       right: 0;
       width: 100%;
       height: 0%;
-       background-image: linear-gradient(to bottom, #fa709a 0%, #fee140 100%);
-      background: #11998e;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to bottom, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to bottom, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background-image: linear-gradient(to bottom, #fa709a 0%, #fee140 100%);
+      background: #11998e;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to bottom, #38ef7d, #11998e);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to bottom, #38ef7d, #11998e);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       transition: all 400ms ease-in-out;
       opacity: 1;
     }
@@ -48,8 +51,13 @@
 
       .card-title {
         font-size: bolder;
-        font-size: 1.4em;
+        font-size: 1em;
       }
+
+      .action-mobile {
+        display: none;
+      }
+
     }
 
     .card-onHover {
@@ -63,12 +71,12 @@
       z-index: 1;
       opacity: 0;
       border-radius: 10px;
+
       .tech-stack-pill {
         border-bottom: 2px solid black;
         color: black;
         padding: 5px;
         margin: 5px;
-
       }
 
       &:hover {
@@ -77,29 +85,27 @@
         opacity: 1;
         transition: all 300ms ease-in-out;
 
-        .company-logo {
-        animation: slideInRight; /* referring directly to the animation's @keyframe declaration */
-        animation-duration: 500ms; /* don't forget to set a duration! */
-        }
         .tech-stack-pill {
-        animation: slideInLeft; /* referring directly to the animation's @keyframe declaration */
-        animation-duration: 500ms; /* don't forget to set a duration! */
-        }
-        button {
-          animation: zoomIn;
+          animation: slideInLeft;
+          /* referring directly to the animation's @keyframe declaration */
           animation-duration: 500ms;
+          /* don't forget to set a duration! */
         }
 
-      }
-
-        .proj-detail-btn {
-        transition: all 200ms ease-in-out;
-
-        &:hover {
-          transform: scale(1.2);
+        button {
           transition: all 200ms ease-in-out;
+          &:hover {
+            transform: scale(1.2);
+            transition: all 200ms ease-in-out;
+          }
+
         }
+
       }
+    }
+
+    mat-card-actions {
+      margin: 0px;
     }
 
 
@@ -114,99 +120,29 @@
     transform: scale(1.06);
     transition: all 200ms ease-in-out;
   }
+
 }
 
-
 .all-proj-btn-container {
-  margin-bottom: 5%;
-  button{
+  margin-top: 3%;
+  width: 100%;
+  text-align: center;
+
+  button {
     width: 30%;
     padding: 1%;
     font-weight: bold;
   }
 }
 
-
-.container,
-.all-proj-btn-container,
-.card-project {
-  text-align: center;
-  margin-top: 2%;
-  .btn {
-    border: 1px solid #3498db;
-    background: none;
-    padding: 10px 20px;
-    font-size: 20px;
-    cursor: pointer;
-    margin: 10px;
-    transition: 0.8s;
-    position: relative;
-    overflow: hidden;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      width: 100%;
-      height: 0%;
-      background: #3498db;
-      z-index: -1;
-      transition: 0.8s;
-    }
-  }
-
-  .btn1,
-  .btn2 {
-    color: #3498db;
-
-    &:hover {
-      color: #fff;
-    }
-  }
-
-  .btn3,
-  .btn4 {
-    color: white;
-
-    &:hover {
-      color: #3498db;
-    }
-  }
-
-  .btn1::before,
-  .btn3::before {
-    top: 0;
-    border-radius: 0 0 50% 50%;
-  }
-
-  .btn2::before,
-  .btn4::before {
-    bottom: 0;
-    border-radius: 50% 50% 0 0;
-  }
-
-  .btn3::before,
-  .btn4::before {
-    height: 180%;
-  }
-
-  .btn1:hover::before,
-  .btn2:hover::before {
-    height: 180%;
-  }
-
-  .btn3:hover::before,
-  .btn4:hover::before {
-    height: 0%;
-  }
-}
-
-
 // ######################################### Media query #########################################
 /* smartphones, iPhone, portrait 480x320 phones */
-@media screen and (min-width:320px)  {  };
+@media screen and (min-width:320px) {}
+
+;
+
 /* port and rait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-@media screen and (max-width:481px)  {
+@media screen and (max-width:481px) {
   .exp-detail {
     width: 100%;
   }
@@ -219,21 +155,40 @@
   mat-card,
   .card-project {
     flex: 1 0 auto;
-    max-width: 100%;
-    height: 100%;
+    max-width: 100% !important;
+    height: 100% !important;
+
+    &::before {
+      display: none;
+    }
+
+    .card-onHover {
+      display: none;
+    }
   }
 
   .all-proj-btn-container {
     width: 100% !important;
+    text-align: center;
+    margin-top: 3%;
+
     button {
       width: 100% !important;
       margin: 3% 0;
       padding: 5%;
     }
   }
- };
+
+
+  .action-mobile {
+    display: block !important;
+  }
+}
+
+;
+
 /* port and rait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-@media screen and (max-width:641px)  {
+@media screen and (max-width:641px) {
   .proj-detail-btn-hover {
     width: auto;
   }
@@ -241,10 +196,28 @@
   .btn {
     margin: auto;
   }
- };
+
+  .all-proj-btn-container {
+    width: 100% !important;
+    text-align: center;
+    margin-top: 3%;
+
+    button {
+      width: 80% !important;
+      margin: 3% 0;
+      padding: 2%;
+    }
+  }
+
+}
+
+;
+
 /* tabl and et, landscape iPad, lo-res laptops ands desktops */
-@media screen and (min-width:961px)  {  }
+@media screen and (min-width:961px) {}
+
 /* big and landscape tablets, laptops, and desktops */
-@media screen and (min-width:1025px) {  }
+@media screen and (min-width:1025px) {}
+
 /* hi-r and es laptops and desktops */
-@media screen and (min-width:1281px) {  }
+@media screen and (min-width:1281px) {}

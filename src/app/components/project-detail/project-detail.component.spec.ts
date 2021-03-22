@@ -5,6 +5,7 @@ import {MatCardModule} from '@angular/material/card';
 import { RouterModule } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { SelectedProjectService } from 'src/app/service/getProject/selected-project.service';
 
 import { ProjectDetailComponent } from './project-detail.component';
 
@@ -27,7 +28,10 @@ describe('ProjectDetailComponent', () => {
         MatDialogModule,
         RouterModule,
         RouterTestingModule.withRoutes([])],
-      declarations: [ ProjectDetailComponent ]
+      declarations: [ ProjectDetailComponent ],
+      providers:[
+        // {selectedProjService: SelectedProjectService, useClass: selectedProjectServiceSub }
+      ]
     })
     .compileComponents();
   }));
@@ -41,4 +45,8 @@ describe('ProjectDetailComponent', () => {
   it('should create', () => {
     // expect(component).toBeTruthy();
   });
+
+  class selectedProjectServiceSub {
+
+  }
 });

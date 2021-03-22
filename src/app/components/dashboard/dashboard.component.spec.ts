@@ -12,6 +12,7 @@ import { DashboardComponent } from './dashboard.component';
 import { RouterModule } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { By } from '@angular/platform-browser';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -31,7 +32,9 @@ describe('DashboardComponent', () => {
         NgxSpinnerModule,
         MatDialogModule,
         RouterModule,
-        RouterTestingModule.withRoutes([]),
+        RouterTestingModule.withRoutes([
+          {path: 'dashboard', component: DashboardComponent}
+        ]),
         BrowserAnimationsModule],
         declarations: [ DashboardComponent,
           PortfolioProjectComponent,
@@ -50,4 +53,20 @@ describe('DashboardComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should contain h1 tag', () => {
+    const h1Element = fixture.debugElement.query(By.css('h1'));
+    expect(h1Element.nativeElement.textContent).toBe(' Hi, I am Jay  Web Designer and a Front-end Developer  based in Ontario, Canada ');
+  });
+
+  it('should have let me see some work button',() => {
+    const buttons = fixture.debugElement.queryAll(By.css('button'));
+    const nativeButton: HTMLButtonElement = buttons[2].nativeElement;
+    expect(nativeButton.textContent).toBe('Let me see some work');
+  });
+
+  it('should navigate to / before button is click',() => {
+    const location = TestBed.get(Location);
+    expect(location.path()).toBe('/dashboard');
+  })
 });

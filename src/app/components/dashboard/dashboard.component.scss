@@ -20,6 +20,12 @@
         font-weight: normal;
       }
 
+      .contactMeLink{
+        color: white;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
       .call-action-btn-div {
         justify-content: flex-start;
         align-items: center;
@@ -28,7 +34,6 @@
           height: 50%;
           margin-left: 1%;
           padding: 1%;
-
         }
 
         .git-hub-btn {
@@ -50,7 +55,8 @@
     }
   }
 
-  #stop-scroll-here {
+  #stop-scroll-here,
+  #contact-me-stop-scroll-here {
     margin-bottom: 5%;
     height: 90px;
   }
@@ -125,6 +131,10 @@
     .arrow-down {
       margin: 0px;
     }
+  }
+
+  .lets-talk-btn {
+    padding: 5% !important;
   }
 }
 

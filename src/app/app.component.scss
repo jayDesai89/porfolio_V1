@@ -7,12 +7,22 @@
   margin-top: 5rem;
 }
 
+.goTop-btn {
+  border-radius: 50%;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
 // ######################################### Media query #########################################
 /* smartphones, iPhone, portrait 480x320 phones */
 @media screen and (max-width:320px) { };
 
 /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-@media screen and (max-width:481px) { }
+@media screen and (max-width:481px) {
+  .goTop-btn {
+    padding: 5%;
+  }
+ }
 
 /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 @media screen and (max-width:641px) {}

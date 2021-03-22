@@ -32,4 +32,10 @@ export class LearningProjectComponent implements OnInit {
     this._router.url === '/projects' ? this.showAllProj = true : this.showAllProj = false;
   }
 
+  showProjectDetail(job) {
+    // const companyName = job.companyName;
+    // this.projectService.getSelectedProject(job);
+    // this._router.navigate([`projects/${companyName}`]);
+  }
+
 }

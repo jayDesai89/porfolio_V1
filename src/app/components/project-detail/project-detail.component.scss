@@ -1,33 +1,137 @@
 .project-detail {
-  // padding: 2%;
   background: #212121;
-  color:white;
+  color: white;
 
   .page-title-div {
     padding: 4% 5% 2% 5%;
     color: white;
     width: 100%;
+
     h1 {
       font-weight: normal;
+      a {
+        font-size: 18px;
+        color: white;
+        text-decoration: underline;
+      }
     }
   }
 
   .project-detail-section {
-    padding: 3%;
+    margin-bottom: 3%;
+    .comp-detail-left {
+      padding: 2% 5%;
+
+      .project-name {
+        ul {
+          padding-left: 0px;
+
+          li {
+            display: inline-block;
+            margin: 0.5%;
+
+            &::after {
+              content: ',';
+            }
+
+            &:last-child::after {
+              content: '';
+            }
+          }
+        }
+      }
+    }
+
+
+
+    .rotate-space {
+      width: 2px;
+      border: 1px solid white;
+      transform: rotateZ(10deg);
+    }
+
+    .tech-stack-right {
+      padding: 2% 5%;
+
+      ul>li {
+        display: inline-block;
+      }
+
+      .tech-text {
+        margin: 0.5%;
+
+        &::after {
+          content: ',';
+        }
+
+        &:last-child::after {
+          content: '';
+        }
+      }
+    }
+  }
+
+  .project-responsibility-section {
+    padding: 2% 5%;
+
+
+    .first-box-respon-text {
+      ul {
+
+        li{
+
+          }
+      }
+
+    }
   }
 }
 
 
 // ######################################### Media query #########################################
 /* smartphones, iPhone, portrait 480x320 phones */
-@media screen and (min-width:320px)  {  };
+@media screen and (min-width:320px) {}
+
+;
+
 /* port and rait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-@media screen and (max-width:481px)  {  };
+@media screen and (max-width:481px) {
+  .tech-stack-right {
+    margin-top: 5%;
+  }
+
+  .rotate-space {
+    width: 100% !important;
+    height: 1px;
+    border: 1px solid white;
+    transform: none !important;
+  }
+  .project-responsibility-section {
+    margin-top: 15%;
+    .first-box-respon-text {
+      ul {
+        padding-left: 10%;
+        li{
+          //  list-style: none;
+          }
+      }
+
+    }
+  }
+}
+
+;
+
 /* port and rait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-@media screen and (max-width:641px)  {  };
+@media screen and (max-width:641px) {}
+
+;
+
 /* tabl and et, landscape iPad, lo-res laptops ands desktops */
-@media screen and (min-width:961px)  {  }
+@media screen and (min-width:961px) {}
+
 /* big and landscape tablets, laptops, and desktops */
-@media screen and (min-width:1025px) {  }
+@media screen and (min-width:1025px) {}
+
 /* hi-r and es laptops and desktops */
-@media screen and (min-width:1281px) {  }
+@media screen and (min-width:1281px) {}

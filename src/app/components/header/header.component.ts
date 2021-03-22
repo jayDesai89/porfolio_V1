@@ -26,12 +26,13 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   name = 'Angular 5';
   animationState = 'in';
   navElement: HTMLElement;
+  val:any;
 
   constructor() {}
 
   ngOnInit() {
     // tslint:disable-next-line: deprecation
-    this.onResize(event);
+    this.onResize(this.val);
   }
 
   // tslint:disable-next-line: use-lifecycle-interface
@@ -40,7 +41,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     // console.log(this.navElement);
   }
 
-  @HostListener('window:scroll', ['$event'])
+  @HostListener('window:scroll', [''])
   onScroll() {
     // console.log(window.pageYOffset);
     if (window.pageYOffset > 1) {
@@ -51,7 +52,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     }
   }
 
-  @HostListener('window:resize', ['$event'])
+  @HostListener('window:resize', [''])
   onResize(event) {
     this.innerWidth = window.innerWidth;
     if (this.innerWidth < 992) {

@@ -11,30 +11,39 @@
         </h1>
 
         <p class="txtSize25 mar-h-25 banner-subtext" style="display: block;">
-          looking for fulltime opportunities
+         <a class="contactMeLink" (click)="scrollContactMe($event)">Contact me</a> if you have an interesting project
         </p>
       </div>
 
 
       <div class="call-action-btn-div flex flex-wrap">
         <button mat-raised-button matTooltip="Go to Linked-in" matTooltipClass="custom-tooltip"
-          aria-label="go to linkedin " color="primary" class="git-hub-btn animate__animated animate__rotateIn">
-          <a href="https://www.linkedin.com/in/jay-desai-82626070" target="_blank">
-            <img class="git-hub" src="../../../assets/icons/linkedin.svg" alt="linkedin logo">
-          </a>
+          aria-label="go to linkedin " color="primary" class="git-hub-btn animate__animated animate__rotateIn"
+          style="margin-left: 0px;">
+          <p class="no-margin">
+            <a href="https://www.linkedin.com/in/jay-desai-82626070" target="_blank">
+              <img class="git-hub" src="../../../assets/icons/linkedin.svg" alt="linkedin logo">
+            </a>
+          </p>
         </button>
 
         <button mat-raised-button matTooltip="Go to Github" matTooltipClass="custom-tooltip" aria-label="go to git-hub"
           color="primary" class="git-hub-btn animate__animated animate__rotateIn">
-          <a href="https://github.com/jayDesai89" target="_blank">
-            <img class="git-hub" src="../../../assets/icons/github.svg" alt="github logo">
-          </a>
+          <p class="no-margin">
+            <a href="https://github.com/jayDesai89" target="_blank">
+              <img class="git-hub" src="../../../assets/icons/github.svg" alt="github logo">
+            </a>
+          </p>
+
         </button>
 
         <button mat-raised-button color="primary" (click)="scroll($event)"
           class="scroll-down-btn animate__animated animate__slideInLeft">
-          <span class="txtSize20 arrow-down-text">Let me see some work</span>
-          <img class="arrow-down" src="../../../assets/icons/arrow-down.svg" alt="go to project">
+          <p class="no-margin flex flex-align-center">
+            <span class="txtSize20 arrow-down-text">Some of my projects</span>
+            <img class="arrow-down" src="../../../assets/icons/arrow-down.svg" alt="go to project">
+          </p>
+
         </button>
       </div>
     </div>
@@ -86,8 +95,9 @@
 
   </section>
   <!-- Personal Projects -->
-
-  <section class="contact-me-section ">
+  <div id="contact-me-stop-scroll-here">
+  </div>
+  <section class="contact-me-section">
 
     <div class="row mar-30-bottom">
       <div class="col-12" style="text-align: center;">

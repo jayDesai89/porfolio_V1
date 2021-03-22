@@ -30,9 +30,9 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatDialogModule} from '@angular/material/dialog';
 import { LearningProjectComponent } from './components/learning-project/learning-project.component';
-import { OnHoverEffectDirective } from './directives/on-hover-effect.directive';
 import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
+import { TesttestComponent } from './components/testtest/testtest.component';
 
 
 
@@ -43,8 +43,8 @@ import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
     HeaderComponent,
     PortfolioProjectComponent,
     LearningProjectComponent,
-    OnHoverEffectDirective,
     ProjectDetailComponent,
+    TesttestComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,7 +8,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 
 })
 export class AppComponent implements AfterViewInit {
-  title = 'JayDesai';
+  title = 'JayDesaiPortfolio';
 
   navElement: HTMLElement;
 
@@ -16,17 +16,21 @@ export class AppComponent implements AfterViewInit {
 
   // tslint:disable-next-line: use-lifecycle-interface
   ngAfterViewInit() {
-    this.navElement = document.getElementById('router-out') as HTMLElement;
-    console.log(this.navElement);
+    // this.navElement = document.getElementById('router-out') as HTMLElement;
+    // console.log(this.navElement);
   }
 
   @HostListener('window:scroll', ['$event'])
   onScroll() {
-    if (window.pageYOffset > 1) {
-      // APPLY CLASS TO THIS ELEMENT ON PAGE SCROLL
-    //  this.navElement.classList.add('router-top-margin');
-    } else {
-    //  this.navElement.classList.remove('router-top-margin');
-    }
+    // if (window.pageYOffset > 1) {
+    //   // APPLY CLASS TO THIS ELEMENT ON PAGE SCROLL
+    // //  this.navElement.classList.add('router-top-margin');
+    // } else {
+    // //  this.navElement.classList.remove('router-top-margin');
+    // }
+  }
+
+  scrollToTop(){
+    window.scroll(0,0);
   }
 }
