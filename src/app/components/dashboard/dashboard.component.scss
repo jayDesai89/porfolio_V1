@@ -116,8 +116,15 @@
 
 /* port and rait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 @media screen and (max-width:481px) {
+
   .exp-detail {
     width: 100% !important;
+  }
+
+  .call-action-btn-div > button {
+    &:last-child {
+      margin-left: 0px !important;
+    }
   }
 
   .scroll-down-btn {

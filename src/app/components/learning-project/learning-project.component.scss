@@ -104,14 +104,19 @@
       }
     }
 
+    .code-btn,
+    .demo-btn {
+      a {
+        color: white;
+      }
+    }
+
     mat-card-actions {
       margin: 0px;
     }
 
 
   }
-
-
 
   .card-project:hover::before {
     height: 100%;
@@ -166,6 +171,7 @@
       display: none;
     }
   }
+
 
   .all-proj-btn-container {
     width: 100% !important;

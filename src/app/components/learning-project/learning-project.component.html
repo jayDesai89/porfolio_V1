@@ -31,15 +31,26 @@
             </mat-card-content>
             <div class="w-100">
               <mat-card-actions class="card__detail text-center w-100">
-                <div class="w-100 flex flex-wrap flex-justify-content-space-around">
+                <!-- <div class="w-100 flex flex-wrap flex-justify-content-space-around">
                   <button class="code-btn no-margin" mat-raised-button color="primary"
                     (click)="showProjectDetail(project)">
-                    <span class="txtSize20">Code</span>
+                    <a target="_blank" [href]="project.code"><span class="txtSize20">Code</span></a>
                   </button>
 
                   <button class="demo-btn no-margin" mat-raised-button color="primary"
                     (click)="showProjectDetail(project)">
                     <span class="txtSize20">Demo</span>
+                  </button>
+                </div> -->
+
+
+                <div class="w-100 flex flex-wrap flex-justify-content-space-around">
+                  <button class="code-btn no-margin" mat-raised-button color="primary">
+                    <a [href]="project.code" target="_blank"><span class="txtSize20">Code</span></a>
+                  </button>
+
+                  <button class="demo-btn no-margin" mat-raised-button color="primary">
+                    <a [href]="project.demo" target="_blank"><span class="txtSize20">Demo</span></a>
                   </button>
                 </div>
 
@@ -69,14 +80,20 @@
                 </p>
               </mat-card-content>
             </div>
-            <!-- <div class="w-100 action-mobile">
-              <mat-card-actions class="text-center w-100">
-                <button class="" mat-raised-button color="primary"
-                  (click)="showProjectDetail(job)">
-                  Project detail
-                </button>
+            <div class="w-100 action-mobile">
+              <mat-card-actions class="card__detail text-center w-100">
+                <div class="w-100 flex flex-wrap flex-justify-content-space-around">
+                  <button class="code-btn no-margin" mat-raised-button color="primary">
+                    <a [href]="project.code" target="_blank"><span >Code</span></a>
+                  </button>
+
+                  <button class="demo-btn no-margin" mat-raised-button color="primary">
+                    <a [href]="project.demo" target="_blank"><span>Demo</span></a>
+                  </button>
+                </div>
+
               </mat-card-actions>
-            </div> -->
+            </div>
           </div>
           <!-- Default Card Info - End -->
         </mat-card>

@@ -41,7 +41,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     // console.log(this.navElement);
   }
 
-  @HostListener('window:scroll', [''])
+  // @HostListener('window:scroll', [''])
   onScroll() {
     // console.log(window.pageYOffset);
     if (window.pageYOffset > 1) {
@@ -52,7 +52,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     }
   }
 
-  @HostListener('window:resize', [''])
+  // @HostListener('window:resize', [''])
   onResize(event) {
     this.innerWidth = window.innerWidth;
     if (this.innerWidth < 992) {

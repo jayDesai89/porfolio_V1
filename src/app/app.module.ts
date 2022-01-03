@@ -33,6 +33,10 @@ import { LearningProjectComponent } from './components/learning-project/learning
 import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { TesttestComponent } from './components/testtest/testtest.component';
+import { environment } from 'src/environments/environment';
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { AngularFireModule } from '@angular/fire';
 
 
 
@@ -65,7 +69,9 @@ import { TesttestComponent } from './components/testtest/testtest.component';
     MatDialogModule,
     BrowserAnimationsModule,
     NgxPageScrollCoreModule,
-    MatTooltipModule
+    MatTooltipModule,
+    AngularFireModule,
+    Firebase.initializeApp(environment.firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent],

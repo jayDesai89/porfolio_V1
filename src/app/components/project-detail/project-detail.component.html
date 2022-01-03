@@ -25,21 +25,15 @@
           </h2>
         </div>
         <p class="no-margin">
-          June 2020 – Active project
+          {{selectedProj?.timeline}}
         </p>
-        <div class="project-name">
+        <div class="project-name" *ngIf="selectedProj?.internalProjects.length >= 1">
           <strong>
             Projects:
           </strong>
           <ul>
-            <li>
-              User Enhancement
-            </li>
-            <li>
-              Unlimited Share
-            </li>
-            <li>
-              eChat
+            <li *ngFor="let projName of selectedProj?.internalProjects">
+              {{projName}}
             </li>
           </ul>
         </div>

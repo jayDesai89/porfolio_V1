@@ -32,6 +32,12 @@ export class PortfolioProjectComponent implements OnInit, AfterViewInit {
       companyLogo: 'bell_logo.png',
       imgAltText:  'Bell logo',
       companyLogoWidth: '35%',
+      timeline: 'June 2020 – March 2021',
+      internalProjects:[
+        'User Enhancement',
+        'Unlimited Share',
+        'eChat'
+      ],
       projectDetail: [
         "Collaborating with the team responsible for upgrading existing Bell applications, web sites, and web pages with accessibility features.",
         "Leading a team of developers for developing mark-ups provided by design teams. As well well responsible for proving estimates of time and resources, maintaining timelines of project delivery",
@@ -51,6 +57,8 @@ export class PortfolioProjectComponent implements OnInit, AfterViewInit {
       companyLogo: 'bgis.png',
       imgAltText:  'BGIS logo',
       companyLogoWidth: '100%',
+      timeline: 'Feb 2020 – Apr 2020 (Covid-19 lay-offs)',
+      internalProjects:[  ],
       projectDetail:['Worked with the team to develop a BGIS design system combining both Angular material and Carbon Design System using Sketch, Figma, and AdobeXD',
       'Worked on projects such as global navigation system, customer service request, and support platforms for re-designing and developing, involving user research, interviews, personas, storyboarding along with daily communications with solution consultants, product owners, marketing, and business teams.',
       'Creating custom design and functional components for a new design system in Angular for data binding, Access control, client-side validation, Error handling, etc. ']
@@ -65,6 +73,10 @@ export class PortfolioProjectComponent implements OnInit, AfterViewInit {
       companyLogo: 'isdr.png',
       imgAltText:  'Issuer direct logo',
       companyLogoWidth: '100%',
+      timeline: 'April 2018 - December 2019',
+      internalProjects:[
+        'PlatformID'
+      ],
       projectDetail: [
         "Worked with product managers and UX designers to translate project requirements and business objectives into polished user interfaces.",
         'Developed a modern and responsive User Interface for a "subscription-based service platform" which follows the eCommerce concept, using the latest JavaScript framework Angular 2. Moreover, we gradually upgraded the version of angular from version 2 to Angular 4,5,6,7,8.',
@@ -105,6 +117,8 @@ export class PortfolioProjectComponent implements OnInit, AfterViewInit {
     this.projectService.getSelectedProject(job);
     this._router.navigate([`projects/${companyName}`]);
   }
+
+  // getWorkExpProj
 
 }
 

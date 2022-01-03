@@ -10,7 +10,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 export class AppComponent implements AfterViewInit {
   title = 'JayDesaiPortfolio';
 
-  navElement: HTMLElement;
+  // navElement: HTMLElement;
 
   constructor() {}
 
@@ -20,7 +20,7 @@ export class AppComponent implements AfterViewInit {
     // console.log(this.navElement);
   }
 
-  @HostListener('window:scroll', ['$event'])
+  @HostListener('window:scroll', [])
   onScroll() {
     // if (window.pageYOffset > 1) {
     //   // APPLY CLASS TO THIS ELEMENT ON PAGE SCROLL

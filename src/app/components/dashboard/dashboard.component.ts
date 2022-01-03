@@ -4,6 +4,7 @@ import { FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Valida
 import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
 
 
+
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -13,67 +14,87 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 }
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss'],
+  selector: "app-dashboard",
+  templateUrl: "./dashboard.component.html",
+  styleUrls: ["./dashboard.component.scss"],
   providers: [
-    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}
+    { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher },
   ],
   animations: [
-    trigger('onHover', [
-      transition('initialState <=> finalState', [
-        animate('1500ms ease-in')
-      ])
-    ])
-   ]
+    trigger("onHover", [
+      transition("initialState <=> finalState", [animate("1500ms ease-in")]),
+    ]),
+  ],
 })
 export class DashboardComponent implements OnInit {
+
+  // private submitContactmeForm
   contactmeForm: FormGroup;
   // tslint:disable-next-line: variable-name
   show_project_comp = false;
   // tslint:disable-next-line: variable-name
   show_learning_comp = false;
   matcher = new MyErrorStateMatcher();
-  get personEmail() { return this.contactmeForm.get( 'email' ); }
+  get personEmail() {
+    return this.contactmeForm.get("email");
+  }
 
-
-  constructor(private myElement: ElementRef, private formBuilder: FormBuilder) { }
+  constructor(
+    private myElement: ElementRef,
+    private formBuilder: FormBuilder,
+  ) {}
 
   ngOnInit(): void {
     this.contactme();
-   }
+  }
 
   contactme() {
     this.contactmeForm = this.formBuilder.group({
-      name: new FormControl('', Validators.required),
+      name: new FormControl("", Validators.required),
       // tslint:disable-next-line: max-line-length
-      email: new FormControl('', [ Validators.required, Validators.email]),
-      phone: new FormControl(''),
-      detail: new FormControl('')
+      email: new FormControl("", [Validators.required, Validators.email]),
+      phone: new FormControl(""),
+      detail: new FormControl(""),
     });
   }
 
   getContactmeForm(value) {
-    console.log(value);
+    console.log('This is form value',value);
+    const { name, email, phone, detail } = value;
+    const date = Date();
+    const html = `
+    <div>From: ${name}</div>
+    <div>Email: <a href="mailto:${email}">${email}</a></div>
+    <div>Date: ${date}</div>
+    <div>Phone: ${phone}</div>
+    <div>Message: ${detail}</div>
+  `;
+
+  let formRequest = { name, email, phone, detail, date, html };
   }
 
   scroll(event) {
-    this.myElement.nativeElement.ownerDocument.getElementById('stop-scroll-here').scrollIntoView({behavior: 'smooth'});
+    this.myElement.nativeElement.ownerDocument
+      .getElementById("stop-scroll-here")
+      .scrollIntoView({ behavior: "smooth" });
   }
 
   scrollContactMe(event) {
-    this.myElement.nativeElement.ownerDocument.getElementById('contact-me-stop-scroll-here').scrollIntoView({behavior: 'smooth'});
+    this.myElement.nativeElement.ownerDocument
+      .getElementById("contact-me-stop-scroll-here")
+      .scrollIntoView({ behavior: "smooth" });
   }
 
-  @HostListener('document:scroll')
+  @HostListener("document:scroll")
   scrollPage() {
     // console.log(document.body.scrollTop);
     // tslint:disable-next-line: max-line-length
-    (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) ? this.show_project_comp = true : this.show_project_comp = false;
+    document.body.scrollTop > 150 || document.documentElement.scrollTop > 150
+      ? (this.show_project_comp = true)
+      : (this.show_project_comp = false);
     // tslint:disable-next-line: max-line-length
-    (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) ? this.show_learning_comp = true : this.show_learning_comp = false;
+    document.body.scrollTop > 400 || document.documentElement.scrollTop > 400
+      ? (this.show_learning_comp = true)
+      : (this.show_learning_comp = false);
   }
-
-
-
 }
