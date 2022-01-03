@@ -36,7 +36,6 @@ import { TesttestComponent } from './components/testtest/testtest.component';
 import { environment } from 'src/environments/environment';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { AngularFireModule } from '@angular/fire';
 
 
 
@@ -69,9 +68,7 @@ import { AngularFireModule } from '@angular/fire';
     MatDialogModule,
     BrowserAnimationsModule,
     NgxPageScrollCoreModule,
-    MatTooltipModule,
-    AngularFireModule,
-    Firebase.initializeApp(environment.firebaseConfig)
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent],
