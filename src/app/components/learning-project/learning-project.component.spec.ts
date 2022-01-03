@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule, MatButtonToggleModule, MatDialogModule, MatDividerModule, MatFormFieldModule, MatInputModule, MatTabsModule } from '@angular/material';
 import { NgxSpinnerModule } from 'ngx-spinner';
@@ -12,7 +12,7 @@ describe('LearningProjectComponent', () => {
   let component: LearningProjectComponent;
   let fixture: ComponentFixture<LearningProjectComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [MatDividerModule,
         MatButtonModule,
