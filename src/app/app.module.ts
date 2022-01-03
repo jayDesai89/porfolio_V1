@@ -37,6 +37,9 @@ import { environment } from 'src/environments/environment';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
+/** Firebase Modules */
+
+
 
 
 @NgModule({
@@ -68,7 +71,8 @@ import { getAnalytics } from "firebase/analytics";
     MatDialogModule,
     BrowserAnimationsModule,
     NgxPageScrollCoreModule,
-    MatTooltipModule
+    MatTooltipModule,
+    AngularFireModule
   ],
   providers: [],
   bootstrap: [AppComponent],
