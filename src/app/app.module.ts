@@ -38,7 +38,9 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
 /** Firebase Modules */
-
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from "@angular/fire/compat/auth";
+import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
 
 
 
@@ -72,7 +74,9 @@ import { getAnalytics } from "firebase/analytics";
     BrowserAnimationsModule,
     NgxPageScrollCoreModule,
     MatTooltipModule,
-    AngularFireModule
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent],
@@ -80,3 +84,7 @@ import { getAnalytics } from "firebase/analytics";
   entryComponents: []
 })
 export class AppModule { }
+function provideFirebaseApp(arg0: () => import("@firebase/app").FirebaseApp): any[] | import("@angular/core").Type<any> | import("@angular/core").ModuleWithProviders<{}> {
+  throw new Error('Function not implemented.');
+}
+

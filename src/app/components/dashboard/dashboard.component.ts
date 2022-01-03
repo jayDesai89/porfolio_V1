@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, ElementRef, HostListener, Inject, O
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 
 
 
@@ -28,6 +29,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 })
 export class DashboardComponent implements OnInit {
 
+  private contactMeformSubmit: AngularFirestoreCollection<any>;
   // private submitContactmeForm
   contactmeForm: FormGroup;
   // tslint:disable-next-line: variable-name
@@ -42,9 +44,11 @@ export class DashboardComponent implements OnInit {
   constructor(
     private myElement: ElementRef,
     private formBuilder: FormBuilder,
+    private fireStore: AngularFirestore
   ) {}
 
   ngOnInit(): void {
+    this.contactMeformSubmit = this.fireStore.collection('submission')
     this.contactme();
   }
 
@@ -60,17 +64,21 @@ export class DashboardComponent implements OnInit {
 
   getContactmeForm(value) {
     console.log('This is form value',value);
-    const { name, email, phone, detail } = value;
-    const date = Date();
-    const html = `
-    <div>From: ${name}</div>
-    <div>Email: <a href="mailto:${email}">${email}</a></div>
-    <div>Date: ${date}</div>
-    <div>Phone: ${phone}</div>
-    <div>Message: ${detail}</div>
-  `;
+    this.contactMeformSubmit.add(value).then(res => {
+      console.log('This is form value',value);
+    }).catch(err=> console.log(err));
 
-  let formRequest = { name, email, phone, detail, date, html };
+  //   const { name, email, phone, detail } = value;
+  //   const date = Date();
+  //   const html = `
+  //   <div>From: ${name}</div>
+  //   <div>Email: <a href="mailto:${email}">${email}</a></div>
+  //   <div>Date: ${date}</div>
+  //   <div>Phone: ${phone}</div>
+  //   <div>Message: ${detail}</div>
+  // `;
+
+  // let formRequest = { name, email, phone, detail, date, html };
   }
 
   scroll(event) {
