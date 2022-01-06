@@ -12,6 +12,25 @@
     </div>
   </section>
 
+
+    <!-- Personal Projects -->
+    <section *ngIf="!showAllProj" id="learning-proj-section" class="learning-proj-section">
+      <div class="row">
+        <div class="col-12" style="text-align: center;">
+          <div>
+            <h2 class="" aria-label="Learning projects">
+              Personal projects
+            </h2>
+            <span class="txtSize16">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+              Nam repudiandae in neque fugit explicabo quam ea, repellat<br>
+              magni sint necessitatibus!
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
   <section class="project-card-section">
     <div class="flex text-center flex-justify-content-space-around flex-wrap">
       <div *ngFor="let project of learningExp; let i = index"
@@ -31,18 +50,6 @@
             </mat-card-content>
             <div class="w-100">
               <mat-card-actions class="card__detail text-center w-100">
-                <!-- <div class="w-100 flex flex-wrap flex-justify-content-space-around">
-                  <button class="code-btn no-margin" mat-raised-button color="primary"
-                    (click)="showProjectDetail(project)">
-                    <a target="_blank" [href]="project.code"><span class="txtSize20">Code</span></a>
-                  </button>
-
-                  <button class="demo-btn no-margin" mat-raised-button color="primary"
-                    (click)="showProjectDetail(project)">
-                    <span class="txtSize20">Demo</span>
-                  </button>
-                </div> -->
-
 
                 <div class="w-100 flex flex-wrap flex-justify-content-space-around">
                   <button class="code-btn no-margin" mat-raised-button color="primary">
@@ -103,13 +110,5 @@
 
 
   </section>
-
-  <div *ngIf="!showTitle">
-    <div class="container all-proj-btn-container">
-      <button mat-raised-button color="primary" [routerLink]="'/projects'">
-        <span class="txtSize20">View All Projects</span>
-      </button>
-    </div>
-  </div>
 
 </article>

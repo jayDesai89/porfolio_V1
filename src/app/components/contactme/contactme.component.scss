@@ -1,0 +1,28 @@
+.contact-me-section {
+  margin: 3% 5%;
+  .contact-me {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .contact-me-form{
+      background: white;
+      padding: 4%;
+      color: black;
+      border-radius: 15px;
+
+      mat-form-field {
+        margin-bottom: 2%;
+      }
+
+      .lets-talk-btn {
+        padding: 2%;
+        .send-icon {
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}

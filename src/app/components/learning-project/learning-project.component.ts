@@ -37,7 +37,7 @@ export class LearningProjectComponent implements OnInit {
   constructor(public _router: Router, public displayProject: DisplayProjectService) { }
 
   ngOnInit() {
-    this._router.url === '/projects' ? this.showAllProj = true : this.showAllProj = false;
+    this.showAllProj = this._router.url === '/projects' ? true : false;
 
     this.displayProject.getPersonalProj().subscribe((res) => {
       console.log(`This is learning experience`);
