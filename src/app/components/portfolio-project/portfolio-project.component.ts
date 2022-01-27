@@ -105,7 +105,7 @@ export class PortfolioProjectComponent implements OnInit, AfterViewInit {
               private projectService: SelectedProjectService) { }
 
   ngOnInit() {
-    this._router.url === '/projects' ? this.showTitle = true : this.showTitle = false;
+   this.showTitle = this._router.url === '/projects' ? true : false;
   }
 
   ngAfterViewInit(): void {

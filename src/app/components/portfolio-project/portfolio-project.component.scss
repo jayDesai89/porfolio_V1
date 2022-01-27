@@ -1,18 +1,21 @@
 .experience-project {
   background: #212121;
 
-  .page-title-div {
-    padding: 4% 5% 2% 5%;
-    color: white;
-    width: 100%;
 
-    h1 {
-      font-weight: normal;
-    }
-  }
 
   .project-card-div {
     padding: 3%;
+  }
+
+  .exp-section {
+    margin-top: 3%;
+    margin-bottom: 0;
+
+    .exp-detail {
+      width: 50%;
+      margin: auto;
+    }
+
   }
 
   mat-card,
@@ -157,7 +160,7 @@
 /* port and rait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 @media screen and (max-width:481px) {
   .exp-detail {
-    width: 100%;
+    width: 100% !important;
   }
 
   .project-card-div {
@@ -179,28 +182,18 @@
       display: none;
     }
   }
-
-  .all-proj-btn-container {
-    width: 100% !important;
-    text-align: center;
-    margin-top: 3%;
-
-    button {
-      width: 100% !important;
-      margin: 3% 0;
-      padding: 5%;
-    }
-  }
-
   .action-mobile {
     display: block !important;
   }
-}
-
-;
+};
 
 /* port and rait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 @media screen and (max-width:641px) {
+
+  .exp-detail {
+    width: 100% !important;
+  }
+
   .proj-detail-btn-hover {
     width: auto;
   }
@@ -209,18 +202,6 @@
     margin: auto;
   }
 
-
-  .all-proj-btn-container {
-    width: 100% !important;
-    text-align: center;
-    margin-top: 3%;
-
-    button {
-      width: 80% !important;
-      margin: 3% 0;
-      padding: 2%;
-    }
-  }
 }
 
 ;

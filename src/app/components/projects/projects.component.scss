@@ -1,0 +1,96 @@
+.projects{
+
+  .page-title-div {
+    padding: 4% 5% 2% 5%;
+    color: white;
+    width: 100%;
+
+    h1 {
+      font-weight: normal;
+    }
+  }
+
+  .learning-proj-section {
+    margin-top: 3%;
+    margin-bottom: 0;
+  }
+
+
+  .all-proj-btn-container {
+    margin-top: 3%;
+    width: 100%;
+    text-align: center;
+
+    button {
+      width: 30%;
+      padding: 1%;
+      font-weight: bold;
+    }
+  }
+}
+
+
+// ######################################### Media query #########################################
+/* smartphones, iPhone, portrait 480x320 phones */
+@media screen and (min-width:320px) {}
+
+;
+
+/* port and rait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+@media screen and (max-width:481px) {
+  .exp-detail {
+    width: 100%;
+  }
+
+  .project-card-div {
+    padding: 3% 1% !important;
+  }
+
+  .all-proj-btn-container {
+    width: 100% !important;
+    text-align: center;
+    margin-top: 3%;
+
+    button {
+      width: 100% !important;
+      margin: 3% 0;
+      padding: 5%;
+    }
+  }
+
+  .action-mobile {
+    display: block !important;
+  }
+};
+
+/* port and rait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+@media screen and (max-width:641px) {
+
+  .btn {
+    margin: auto;
+  }
+
+
+  .all-proj-btn-container {
+    width: 100% !important;
+    text-align: center;
+    margin-top: 3%;
+
+    button {
+      width: 80% !important;
+      margin: 3% 0;
+      padding: 2%;
+    }
+  }
+}
+
+;
+
+/* tabl and et, landscape iPad, lo-res laptops ands desktops */
+@media screen and (min-width:961px) {}
+
+/* big and landscape tablets, laptops, and desktops */
+@media screen and (min-width:1025px) {}
+
+/* hi-r and es laptops and desktops */
+@media screen and (min-width:1281px) {}

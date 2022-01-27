@@ -41,6 +41,8 @@ import { getAnalytics } from "firebase/analytics";
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from "@angular/fire/compat/auth";
 import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
+import { ProjectsComponent } from './components/projects/projects.component';
+import { ContactmeComponent } from './components/contactme/contactme.component';
 
 
 
@@ -53,6 +55,8 @@ import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
     LearningProjectComponent,
     ProjectDetailComponent,
     TesttestComponent,
+    ProjectsComponent,
+    ContactmeComponent,
   ],
   imports: [
     BrowserModule,
@@ -78,6 +82,7 @@ import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
     AngularFireAuthModule,
     AngularFirestoreModule
   ],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

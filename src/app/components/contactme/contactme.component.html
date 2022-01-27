@@ -1,0 +1,67 @@
+<section class="contact-me-section">
+  <div class="row mar-30-bottom">
+    <div class="col-12" style="text-align: center;">
+      <div>
+        <h2 class="" aria-label="Contact me">
+          Contact me
+        </h2>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="contact-me flex flex-column flex-justify-content-center">
+    <div class="row">
+      <div class="col-12 text-center w-100">
+        <div class="contact-me-form">
+          <form action="" [formGroup]="contactmeForm" (ngSubmit)="getContactmeForm(contactmeForm.value)"
+            appearance="fill">
+            <!-- Enter name of the city here -->
+            <mat-form-field class="w-100">
+              <mat-label>Name</mat-label>
+              <input matInput formControlName="name" aria-label="name" type="text" aria-required="true"
+                appearance="fill">
+            </mat-form-field>
+
+            <!-- Enter name of the city here -->
+            <mat-form-field class="w-100">
+              <mat-label>Email</mat-label>
+              <input matInput formControlName="email" aria-label="email"
+              type="email" [errorStateMatcher]="matcher"
+              placeholder="Ex. pat@example.com"
+              appearance="fill">
+              <mat-error *ngIf="personEmail?.hasError('email') && !personEmail?.hasError('required')">
+                Please enter a valid email address
+              </mat-error>
+              <mat-error *ngIf="personEmail?.hasError('required')">
+                Email is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+
+            <!-- Enter name of the city here -->
+            <mat-form-field class="w-100">
+              <mat-label>Phone</mat-label>
+              <input matInput formControlName="phone" aria-label="phone" type="phone" aria-required="true"
+                appearance="fill">
+            </mat-form-field>
+
+            <!-- Enter name of the city here -->
+            <mat-form-field class="w-100">
+              <mat-label>Detail</mat-label>
+              <textarea matInput formControlName="detail" aria-label="detail"rows="4" cols="50" type="text" aria-required="true"
+                appearance="fill"></textarea>
+            </mat-form-field>
+
+            <div>
+              <button mat-raised-button type="submit" color="primary" [disabled]="!contactmeForm.valid"
+                class="lets-talk-btn animate__animated animate__slideInLeft">
+                <span class="txtSize20">Lets talk</span>
+                <img class="send-icon" src="../../../assets/icons/send.svg" alt="contact jay">
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

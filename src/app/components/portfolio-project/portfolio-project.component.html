@@ -1,13 +1,19 @@
 <article class="experience-project">
 
-  <!-- Banner start -->
-  <section *ngIf="showTitle" class="page-title">
-    <div class="flex flex-row flex-justify-content-space-between banner-div flex-wrap">
-      <!-- Banner Text -->
-      <div class="page-title-div">
-        <h1 class="banner-text animate__animated animate__slideInLeft" color="white">
-          Projects
-        </h1>
+  <section *ngIf="!showTitle" id="exp-section" class="exp-section">
+    <div class="row mar-30-bottom">
+      <div class="col-12  text-center">
+        <div class="exp-detail">
+          <h2 class="" aria-label="Experience">
+            Featured Projects
+          </h2>
+          <span class="txtSize16">
+            Over 5 years of professional experience in web-based business application development,
+            focusing on the presentation layer (UI/UX) as a UI/UX Front End Developer.
+            Firsthand experience on the Software Development Life Cycle (SDLC) of Agile methodology
+            including UX Design, implementation, testing, deployment, and maintenance.
+          </span>
+        </div>
       </div>
     </div>
   </section>
@@ -81,21 +87,6 @@
       </div>
     </div>
 
-
-
-  </section>
-
-  <div *ngIf="!showTitle">
-    <div  class="container all-proj-btn-container">
-      <button mat-raised-button color="primary" [routerLink]="'/projects'">
-        <span class="txtSize20">View All Projects</span>
-      </button>
-    </div>
-  </div>
-
-
-  <section *ngIf="showTitle">
-    <app-learning-project></app-learning-project>
   </section>
 
 </article>

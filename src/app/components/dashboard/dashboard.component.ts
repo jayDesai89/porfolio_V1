@@ -2,17 +2,12 @@ import { ChangeDetectionStrategy, Component, ElementRef, HostListener, Inject, O
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
+
 
 
 
 /** Error when invalid control is dirty, touched, or submitted. */
-export class MyErrorStateMatcher implements ErrorStateMatcher {
-  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
-    const isSubmitted = form && form.submitted;
-    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
-  }
-}
+
 
 @Component({
   selector: "app-dashboard",
@@ -28,57 +23,24 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   ],
 })
 export class DashboardComponent implements OnInit {
-
-  private contactMeformSubmit: AngularFirestoreCollection<any>;
   // private submitContactmeForm
-  contactmeForm: FormGroup;
+  // contactmeForm: FormGroup;
   // tslint:disable-next-line: variable-name
   show_project_comp = false;
   // tslint:disable-next-line: variable-name
   show_learning_comp = false;
-  matcher = new MyErrorStateMatcher();
-  get personEmail() {
-    return this.contactmeForm.get("email");
-  }
+  // matcher = new MyErrorStateMatcher();
+  // get personEmail() {
+  //   return this.contactmeForm.get("email");
+  // }
 
   constructor(
     private myElement: ElementRef,
-    private formBuilder: FormBuilder,
-    private fireStore: AngularFirestore
-  ) {}
+    private formBuilder: FormBuilder ) {}
 
   ngOnInit(): void {
-    this.contactMeformSubmit = this.fireStore.collection('submission')
-    this.contactme();
-  }
-
-  contactme() {
-    this.contactmeForm = this.formBuilder.group({
-      name: new FormControl("", Validators.required),
-      // tslint:disable-next-line: max-line-length
-      email: new FormControl("", [Validators.required, Validators.email]),
-      phone: new FormControl(""),
-      detail: new FormControl(""),
-    });
-  }
-
-  getContactmeForm(value) {
-    console.log('This is form value',value);
-    this.contactMeformSubmit.add(value).then(res => {
-      console.log('This is form value',value);
-    }).catch(err=> console.log(err));
-
-  //   const { name, email, phone, detail } = value;
-  //   const date = Date();
-  //   const html = `
-  //   <div>From: ${name}</div>
-  //   <div>Email: <a href="mailto:${email}">${email}</a></div>
-  //   <div>Date: ${date}</div>
-  //   <div>Phone: ${phone}</div>
-  //   <div>Message: ${detail}</div>
-  // `;
-
-  // let formRequest = { name, email, phone, detail, date, html };
+    // this.contactMeformSubmit = this.fireStore.collection('submission')
+    // this.contactme();
   }
 
   scroll(event) {

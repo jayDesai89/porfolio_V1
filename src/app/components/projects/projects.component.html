@@ -1,0 +1,39 @@
+<section class="projects">
+
+  <!-- Banner start -->
+  <section *ngIf="isProject" class="page-title">
+    <div class="flex flex-row flex-justify-content-space-between banner-div flex-wrap">
+      <!-- Banner Text -->
+      <div class="page-title-div">
+        <h1 class="banner-text animate__animated animate__slideInLeft" color="white">
+          Projects
+        </h1>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="exp-section" class="exp-section">
+    <app-portfolio-project></app-portfolio-project>
+  </section>
+  <!-- Experience end -->
+
+  <!-- Personal Projects -->
+  <section id="learning-proj-section" class="learning-proj-section">
+    <app-learning-project></app-learning-project>
+  </section>
+
+  <section>
+    <div>
+      <div class="container all-proj-btn-container">
+        <button *ngIf="!isProject" mat-raised-button color="primary" [routerLink]="'/projects'">
+          <span class="txtSize20">View All Projects</span>
+        </button>
+        <!-- ADD HOM E ROUTE AND TEXT IF URL IS /PROJECTS-->
+        <button *ngIf="isProject" mat-raised-button color="primary" [routerLink]="'/home'">
+          <span class="txtSize20">Home</span>
+        </button>
+      </div>
+    </div>
+  </section>
+</section>
