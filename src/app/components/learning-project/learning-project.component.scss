@@ -1,5 +1,6 @@
 .learning-project {
   background: #212121;
+  // padding-top: 5%;
 
   .page-title-div {
     padding: 4% 5% 2% 5%;
@@ -136,6 +137,10 @@
 
 /* port and rait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 @media screen and (max-width:481px) {
+  .learning-project {
+    // padding-top: 20%;
+  }
+
   .exp-detail {
     width: 100%;
   }

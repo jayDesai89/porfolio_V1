@@ -41,6 +41,13 @@ body {
   }
 }
 
+button{
+  &:hover{
+    transform: scale(1.1) !important;
+    transition: all 500ms ease-in-out !important;
+  }
+}
+
 .text-center {
   text-align: center;
 }

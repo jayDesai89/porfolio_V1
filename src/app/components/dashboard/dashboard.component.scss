@@ -1,19 +1,27 @@
 @import '../../../variables.scss';
 
 .dashboard {
-  background-color: #212121;
   color: white;
+  padding-top: 5%;
 
   .banner-section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-image: url('../../../assets/images/pexels-stein-egil-liland-3535417.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    transform: scale(1);
+
 
 
     .banner-div {
       color: white;
       text-align: left;
       padding: 8% 5%;
+      margin-bottom: 10%;
+
 
       .banner-text {
         font-size: 3em;
@@ -36,7 +44,6 @@
               &:hover {
                 .dev-icon {
                   opacity: 100;
-                  color: red;
                   transition: all 300ms ease-in-out;
                   animation: slideInRight;
                   /* referring directly to the animation's @keyframe declaration */
@@ -83,10 +90,17 @@
     }
   }
 
-  #stop-scroll-here,
-  #contact-me-stop-scroll-here {
+  #stop-scroll-here {
     margin-bottom: 5%;
+    margin-top: 3%;
+    // height: 90px;
+    background-color: transparent;
+  }
+
+  #contact-me-stop-scroll-here {
+    // margin-bottom: 5%;
     height: 90px;
+    background-color: #212121;
   }
 
 
@@ -97,10 +111,22 @@
 
 // ######################################### Media query #########################################
 /* smartphones, iPhone, portrait 480x320 phones */
-@media screen and (min-width:320px) {}
+@media screen and (max-width:320px) {
+}
 
-/* port and rait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 @media screen and (max-width:481px) {
+  .banner-section {
+    background-image: url('../../../assets/images/pexels-alexandre-p-junior-7736151.jpg') !important;
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    transform: scale(1);
+    .banner-div{
+      padding-top: 30% !important;
+    }
+  }
+
 
   .contectMe-Text {
     display: none;
@@ -117,7 +143,7 @@
   }
 
   .scroll-down-btn {
-    width: 100% !important;
+    width: auto;
 
     .arrow-down-text {
       padding: 5px;

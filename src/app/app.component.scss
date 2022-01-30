@@ -1,10 +1,17 @@
 .main-container {
   position: relative;
   background: #212121;
+  .test {
+    // background-image: url('../assets/images/pexels-snapwire-32237.jpg');
+    // background-size:contain;
+    // background-repeat: no-repeat;
+    // height: 100%;
+    // transform: scale(1);
+  }
 }
 
 #router-out {
-  margin-top: 5rem;
+  // margin-top: 5rem;
 }
 
 .goTop-btn {
@@ -15,17 +22,26 @@
 
 // ######################################### Media query #########################################
 /* smartphones, iPhone, portrait 480x320 phones */
-@media screen and (max-width:320px) { };
+@media screen and (max-width:320px) {
+
+
+};
 
 /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 @media screen and (max-width:481px) {
+  .main-container {
+    .test {
+
+    }
+  }
   .goTop-btn {
     padding: 5%;
   }
  }
 
 /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-@media screen and (max-width:641px) {}
+@media screen and (max-width:641px) {
+}
 
 /* tablet, landscape iPad, lo-res laptops ands desktops */
 @media screen and (max-width:961px) { }
