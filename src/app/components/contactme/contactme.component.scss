@@ -1,6 +1,6 @@
 .contact-me-section {
   // margin: 3% 5%;
-  background-color: #212121;
+  background-color: background-black;
   .contact-me {
     width: 100%;
     display: flex;
@@ -11,7 +11,7 @@
     .contact-me-form{
       background: white;
       padding: 4%;
-      color: black;
+      color: app-black;
       border-radius: 15px;
 
       mat-form-field {
