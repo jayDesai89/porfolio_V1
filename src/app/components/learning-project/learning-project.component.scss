@@ -22,7 +22,7 @@
     max-width: 350px;
     height: 350px;
     background-color: white;
-    color: black;
+    color: app-black;
     font-size: 1rem;
     transition: all 200ms ease-in-out;
     position: relative;
@@ -75,7 +75,7 @@
 
       .tech-stack-pill {
         border-bottom: 2px solid black;
-        color: black;
+        color: app-black;
         padding: 5px;
         margin: 5px;
       }
