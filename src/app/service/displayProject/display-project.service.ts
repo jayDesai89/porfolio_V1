@@ -8,17 +8,21 @@ import { personalProj } from "src/app/modal/learningProj";
   providedIn: 'root'
 })
 export class DisplayProjectService {
-  apiRes;
+  expJson = '../../../assets/mock-json/experience.json';
+  learnJson = '../../../assets/mock-json/learningExp.json';
+  apiResOne;
+  apiResTwo;
 
   constructor(private _http: HttpClient) { }
 
   getExperienceProj(): Observable<experienceProj> {
-    this.apiRes = this._http.get("../../json/experience.json");
-    return this.apiRes as Observable<experienceProj>;
+    this.apiResOne = this._http.get(this.expJson);
+    return this.apiResOne as Observable<experienceProj>;
   }
 
   getPersonalProj(): Observable<personalProj> {
-    this.apiRes = this._http.get("../../json/learningExp.json");
-    return this.apiRes as Observable<personalProj>;
+    this.apiResTwo = this._http.get(this.learnJson);
+    console.log(this.apiResTwo);
+    return this.apiResTwo as Observable<personalProj>;
   }
 }

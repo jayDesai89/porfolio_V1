@@ -40,7 +40,7 @@
           <div class="card-onHover flex flex-column flex-justify-content-space-around flex-wrap">
             <mat-card-content class="card__snippet txtSize16">
               <div class="flex flex-row flex-justify-content-center flex-wrap">
-                <div *ngFor="let tech of project.techStack">
+                <div *ngFor="let tech of project?.techStack">
                   <div class="tech-stack-pill" *ngIf="i < 5">
                     <span>{{tech}}</span>
                   </div>
