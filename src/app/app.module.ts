@@ -56,7 +56,7 @@ import { ContactmeComponent } from './components/contactme/contactme.component';
     ProjectDetailComponent,
     TesttestComponent,
     ProjectsComponent,
-    ContactmeComponent,
+    ContactmeComponent
   ],
   imports: [
     BrowserModule,
@@ -80,7 +80,8 @@ import { ContactmeComponent } from './components/contactme/contactme.component';
     MatTooltipModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    HttpClientModule
   ],
   exports: [],
   providers: [],
