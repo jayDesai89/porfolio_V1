@@ -1,11 +1,32 @@
 {
 "experience" : [
   {
-      "id": 0,
+    "id": 0,
+    "companyName" : "Rogers",
+    "position": "Senior UI Web Developer",
+    "techStack": ["HTML5", "CSS", "Bootstrap4", "jQuery", "Angular 10", "Typescript"],
+    "description": "Rogers is Canada’s one of the another largest telecommunications company which provides Mobile phone, TV, high speed and wireless internet, and residential home phones services",
+    "companyLogo": "Rogers_logo.png",
+    "imgAltText":  "Rogers logo",
+    "companyLogoWidth": "70%",
+    "timeline": "March 2021 – Current",
+    "internalProjects":[
+      "User Enhancement",
+      "Unlimited Share",
+      "eChat"
+    ],
+    "projectDetail": [
+      "Collaborating with the team responsible for upgrading existing Bell applications, web sites, and web pages with accessibility features.",
+      "Leading a team of developers for developing mark-ups provided by design teams. As well well responsible for proving estimates of time and resources, maintaining timelines of project delivery",
+      "Communicating and collaborating with different teams such as Business, Designs, Development, Implementation, and Testing ",
+      "Working as a solution architecture, code reviews, and guiding developers for writing clean, maintainable code."
+    ]
+  },{
+      "id": 1,
       "companyName" : "Bell",
       "position": "UI Web Developer / Solution Architecture",
       "techStack": ["HTML5", "CSS", "Bootstrap4", "jQuery", "Angular 4+", "Typescript"],
-      "description": "Bell is Canada’s largest telecommunications company which provides Mobile phone, TV, high speed and wireless internet, and residential home phones services",
+      "description": "Bell is Canada’s one of largest telecommunications company which provides Mobile phone, TV, high speed and wireless internet, and residential home phones services",
       "companyLogo": "bell_logo.png",
       "imgAltText":  "Bell logo",
       "companyLogoWidth": "35%",
@@ -21,10 +42,9 @@
         "Communicating and collaborating with different teams such as Business, Designs, Development, Implementation, and Testing ",
         "Working as a solution architecture, code reviews, and guiding developers for writing clean, maintainable code."
       ]
-
     },
      {
-      "id": 1,
+      "id": 2,
       "companyName" : "BGIS",
       "position": "Senior UI/UX Designer and Developer",
       "techStack": ["HTML5", "CSS3", "Angular 6+", "Typescript", "SASS", "Bootstrap4", "jQuery", "JSON", "AJAX", "Angular Material", "Angular Them", "Carbon Design System",
@@ -40,7 +60,7 @@
       "Creating custom design and functional components for a new design system in Angular for data binding, Access control, client-side validation, Error handling, etc. "]
     },
      {
-      "id": 2,
+      "id": 3,
       "companyName" : "ISDR",
       "position": "UI/UX Developer",
       "techStack": ["HTML5", "CSS", "Bootstrap4", "jQuery", "Angular 4+", "Typescript"],
