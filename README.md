@@ -25,3 +25,6 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Backend vector created by storyset - www.freepik.com
+<a href='https://www.freepik.com/vectors/developer'>Developer vector created by upklyak - www.freepik.com</a>
