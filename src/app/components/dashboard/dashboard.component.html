@@ -1,35 +1,35 @@
 <article class="dashboard" id="dashboard">
   <!-- Banner start -->
+  <section>
+    <div class="header-spacer" style="height: 50px;"></div>
+  </section>
   <section class="banner-section">
     <div class=" banner-div flex-wrap">
       <!-- Banner Text -->
       <div class="hero-banner animate__animated animate__slideInLeft">
-        <div class="set-me-up">
-          <h1 class="banner-text" style="display: block;">
-            Hi, I am <p style="display: inline-block;" class="name no-margin animate__animated">Jay</p> <br>
-            <p class="no-margin">Front-end Developer, </p>
-            <p class="no-margin">Designer</p>
-            <p class="no-margin">based in Ontario, Canada</p>
-          </h1>
+        <div class="hero-banner-text">
+          <div class="flex flex-column">
+            <h1 class="banner-text" style="display: block;">
+              Hi, I am <p style="display: inline-block;" class="name no-margin animate__animated">Jay</p> <br>
+              <p class="no-margin">Front-end Developer, </p>
+              <p class="no-margin">Designer</p>
+              <p class="no-margin">based in Ontario, Canada</p>
+            </h1>
+          </div>
 
           <div class="call-action-btn-div flex flex-wrap">
 
             <!-- Contact me button text -->
-            <div>
+            <div class="w-100">
               <p class="txtSize25 mar-h-25 banner-subtext flex align-center">
-                <a class="contactMeLink" (click)="scrollContactMe($event)">
-                  <button mat-raised-button matTooltip="Contact me" matTooltipClass="custom-tooltip"
-                    aria-label="Contact me" color="primary"
-                    class="git-hub-btn animate__animated animate__rotateIn mar-5-right"
-                    style="margin-left: 0px;margin-right: 5px;">
-                    <span class="txtSize20 arrow-down-text">Contact me</span>
-                  </button></a>
-                <span class="contectMe-Text">if you have an interesting project</span>
+                <a role="link" class="contactMeLink" (click)="scrollContactMe($event)">
+                 Let's get in touch
+                </a>
               </p>
             </div>
 
             <!-- Social media + CTA buttons -->
-            <div class="flex flex-row">
+            <div class="cta-btn flex flex-row">
               <button mat-raised-button matTooltip="Go to Linked-in" matTooltipClass="custom-tooltip"
                 aria-label="go to linkedin " color="primary" class="git-hub-btn animate__animated animate__rotateIn"
                 style="margin-left: 0px;">
@@ -50,11 +50,11 @@
 
               </button>
 
-              <button mat-raised-button color="primary" (click)="scroll($event)"
+              <button mat-raised-button  matTooltip="My Projects" color="primary" (click)="scroll($event)" matTooltipClass="custom-tooltip"
                 class="scroll-down-btn animate__animated animate__slideInLeft">
-                <p class="no-margin flex flex-align-center">
-                  <span class="txtSize20 arrow-down-text">My Projects</span>
-                  <img class="arrow-down" src="../../../assets/icons/arrow-down.svg" alt="go to project">
+                <p class="no-margin flex flex-align-center txtSize20">
+                  Projects
+                  <!-- <img class="arrow-down" src="../../../assets/icons/arrow-down.svg" alt="go to project"> -->
                 </p>
 
               </button>
@@ -63,9 +63,9 @@
           </div>
         </div>
 
-        <div class="thisis">
-          <img style="width: 100%;height:100%" src="../../../assets/images/stockImages/thisis.png"
-            alt="Developer working with dog">
+        <div class="hero-banner-img">
+          <img src="../../../assets/images/stockImages/thisis.png"
+            alt="Developer hologram">
         </div>
       </div>
 
